@@ -3,6 +3,7 @@ import "./App.css";
 import GetStarted from './components/GetStarted';
 import Login from './components/Login';
 import HotelRecommendation from './components/HotelRecomendation';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
