@@ -4,7 +4,7 @@ import { Button } from "../ui/Button";
 
 const WelcomeNote = () => {
     return (
-        <section className="bg-dark rounded-lg p-5 h-[500px] w-[800px] d-flex flex-column align-items-center justify-content-start position-absolute top-50 start-50 translate-middle" aria-labelledby="listening-heading">
+        <section className="rounded-lg p-5 h-[500px] w-[800px] d-flex flex-column align-items-center justify-content-start position-absolute top-50 start-50 translate-middle" aria-labelledby="listening-heading">
         <div className="text-white fs-3" style={{ marginBottom: '2px', fontFamily:'Poppins' }}>
             <span className="firstSpancolor">Welcome</span> to the
         </div>
