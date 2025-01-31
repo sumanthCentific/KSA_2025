@@ -2,7 +2,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "../ui/Avatar";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between bg-gray-800 p-4 rounded-lg shadow-lg">
+    <header className="flex items-center justify-between bg-gray-800 h-[80px] p-4 rounded-lg shadow-lg">
       {/* Left Section */}
       <div className="flex items-center space-x-4">
         {/* Avatar */}
@@ -12,8 +12,8 @@ const Header = () => {
         </Avatar>
         {/* User Info */}
         <div>
-          <p className="text-sm text-gray-400">Hello,</p>
-          <p className="text-lg font-bold text-white">Anthony</p>
+          <div className="text-sm text-gray-400">Hello,</div>
+          <div className="text-lg font-bold text-white">Anthony</div>
         </div>
       </div>
 
