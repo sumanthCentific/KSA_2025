@@ -1,62 +1,59 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import beachImage from "../../assets/beach-image.jpg";
+import foodImage from "../../assets/food-image.jpg";
+import leapImage from "../../assets/leap-image.jpg";
+import avatar01 from "../../assets/images/avatar-images.jpg";
+import avatar02 from "../../assets/images/avatar-images-2.jpg";
 
-interface CarouselProps {
-  images: string[]; // An array of image URLs
-}
 
-const Carousel: React.FC<CarouselProps> = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+const Carousel = () => {
+  const images = [avatar01,avatar02,beachImage, foodImage, leapImage];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   // Function to go to the next image
   const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Loop back to 0 after the last image
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   // Function to go to the previous image
   const prevImage = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1 // Go to the last image if at the first one
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
+  // Automatically change the image every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(nextImage, 3000);
+    return () => clearInterval(interval); // Clear the interval on component unmount
+  }, []);
+
   return (
-    <div className="carousel-container" style={styles.carouselContainer}>
-      <button onClick={prevImage} className="prev-button" style={styles.button}>
-        &lt; {/* Previous Button */}
-      </button>
-      <img src={images[currentIndex]} alt={`carousel-image-${currentIndex}`} style={styles.image} />
-      <button onClick={nextImage} className="next-button" style={styles.button}>
-        &gt; {/* Next Button */}
-      </button>
+    <div className="carousel-container ">
+      <div className="carousel-wrapper mt-5">
+        <img src={images[currentIndex]} alt="carousel" className="carousel-image" />
+
+        {/* Navigation buttons */}
+        <div className="carousel-buttons d-none">
+          <button className="prev" onClick={prevImage}>
+            &#10094;
+          </button>
+          <button className="next" onClick={nextImage}>
+            &#10095;
+          </button>
+        </div>
+
+        {/* Dot indicators */}
+        <div className="carousel-dots">
+          {images.map((_, index) => (
+            <span 
+              key={index}
+              className={`dot ${currentIndex === index ? 'active' : ''}`}
+              onClick={() => setCurrentIndex(index)}
+            ></span>
+          ))}
+        </div>
+      </div>
     </div>
   );
-};
-
-const styles: Record<string, React.CSSProperties> = {
-  carouselContainer: {
-    position: 'relative',
-    width: '600px',
-    height: '400px',
-    margin: 'auto',
-  },
-  image: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-    borderRadius: '8px',
-  },
-  button: {
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    color: 'white',
-    border: 'none',
-    padding: '10px',
-    fontSize: '24px',
-    cursor: 'pointer',
-    borderRadius: '50%',
-  },
 };
 
 export default Carousel;

@@ -79,3 +79,23 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Ensure the container is 100% height for the canvas to fill */
+.canvas-element {
+  width: 100%;   /* Fill the full width of the parent */
+  height: 100%;  /* Fill the full height of the parent */
+  display: block; /* Remove any space below the canvas */
+}
+
+/* Optional: You can set a height for the parent section that contains the canvas */
+section.relative {
+  height: 400px; /* Adjust the height as per your design needs */
+  position: relative; /* To position other elements (like buttons or dots) */
+}
+
+/* If you want to add some basic styling to the canvas itself */
+canvas {
+  background-color: #333; /* Optional background color */
+}
+
+
