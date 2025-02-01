@@ -1,5 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/Avatar";
 import categories from '../../assets/categories-icon.png';
+import redirect1 from '../../assets/summaryRedirect1.png';
 import profile from '../../assets/Profile.png.png';
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +16,7 @@ const Header = () => {
       <div className="flex items-center space-x-4">
         <img style={{
           width: '30px'
-        }} src={categories} onClick={handleCategoryClick} className="header-icon" />
+        }} src={redirect1} onClick={handleCategoryClick} className="header-icon" />
         {/* Avatar */}
         <Avatar className="h-10 w-10">
           <AvatarImage src={profile} alt="Anthony's Avatar" />
