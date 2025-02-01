@@ -98,4 +98,12 @@ canvas {
   background-color: #333; /* Optional background color */
 }
 
-
+.custom-login-rounded{
+  border-radius: 20px; /* Adjust the radius as needed */
+  padding: 20px; /* Optional padding inside the section */
+}
+/* Add to your App.css or any other stylesheet */
+.form-control-custom {
+  background-color: #f12222; /* Light gray background */
+  color: white; /* White text */
+}
