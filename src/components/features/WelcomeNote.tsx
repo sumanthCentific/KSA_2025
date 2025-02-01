@@ -23,6 +23,7 @@ const WelcomeNote = () => {
         <div className="text-white fs-3" style={{ fontFamily:'Poppins' }}>future of Tourism</div>
         <div style={{ fontFamily:'Poppins' }}>Powered bt Lenovo & Centific</div><br/>
        <Button className="btnGetStarted"  onClick={handleButtonClick} >Get Started</Button>
+       {/* <Carousel images={images} /> */}
     </section>
     
     );
