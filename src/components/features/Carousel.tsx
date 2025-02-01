@@ -27,7 +27,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel-container ">
+    <div className="carousel-container">
       <div className="carousel-wrapper mt-5">
         <img src={images[currentIndex]} alt="carousel" className="carousel-image" />
 

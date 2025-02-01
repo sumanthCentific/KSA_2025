@@ -67,50 +67,68 @@ const SummaryRedirection = () => {
                         width:'734px'
                     }}>
                         <div className="row">
-                            <div className="section">
+                            <div className="section" style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>
                             <img style={{
                                 width: "50px",
-                                marginTop: "25px",
-                                marginLeft: "120px"
+                                height: "50px"
                             }} src={redirect1} onClick={handleredirect1} className="header-icon" />
                             </div>
-                            <div className="section">
+                            <div className="section" style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>
                             <img style={{
                                 width: "50px",
-                                marginTop: "25px",
-                                marginLeft: "120px"
+                                height: "50px"
                             }} src={redirect4} onClick={handleredirect1} className="header-icon" />
                             </div>
                         </div>
                         <div className="row">
-                        <div className="section">
+                        <div className="section" style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>
                             <img style={{
                                 width: "50px",
-                                marginTop: "25px",
-                                marginLeft: "120px"
+                                height: "50px"
                             }} src={redirect2} onClick={handleredirect1} className="header-icon" />
                             </div>
-                            <div className="section">
+                            <div className="section" style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>
                             <img style={{
                                 width: "50px",
-                                marginTop: "25px",
-                                marginLeft: "120px"
+                                height: "50px"
                             }} src={redirect5} onClick={handleredirect1} className="header-icon" />
                             </div>
                         </div>
                         <div className="row">
-                        <div className="section">
+                        <div className="section" style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>
                             <img style={{
                                 width: "50px",
-                                marginTop: "25px",
-                                marginLeft: "120px"
+                                height: "50px"
                             }} src={redirect3} onClick={handleredirect1} className="header-icon" />
                             </div>
-                            <div className="section">
+                            <div className="section" style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center"
+                            }}>
                             <img style={{
                                 width: "50px",
-                                marginTop: "25px",
-                                marginLeft: "120px"
+                                height: "50px"
                             }} src={redirect6} onClick={handleredirect1} className="header-icon" />
                             </div>
                         </div>
