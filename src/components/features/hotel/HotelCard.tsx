@@ -24,7 +24,7 @@ const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
             <p className="text-sm text-gray-400">{hotel.location}</p>
           </div>
           <div className="mt-4">
-            <p className="text-gray-400">Cost: ${hotel.price}/night</p>
+            <p className="text-gray-400">Cost: ${hotel.price} CAD/night</p>
             <p className="text-gray-400">Distance: {hotel.distance} km away</p>
             <p className="text-gray-400">
               Availability: {hotel.availability} left
