@@ -1,19 +1,31 @@
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/Avatar";
+import categories from '../../assets/categories-icon.png';
+import redirect1 from '../../assets/summaryRedirect1.png';
+import profile from '../../assets/Profile.png.png';
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+
+  const navigate = useNavigate();
+  const handleCategoryClick = () => {
+    navigate('/summaryredirection');
+  };
   return (
-    <header className="flex items-center justify-between bg-gray-800 p-4 rounded-lg shadow-lg">
+    <header className="flex items-center justify-between bg-gray-800 h-[80px] p-4 rounded-lg shadow-lg">
       {/* Left Section */}
       <div className="flex items-center space-x-4">
+        <img style={{
+          width: '30px'
+        }} src={redirect1} onClick={handleCategoryClick} className="header-icon" />
         {/* Avatar */}
         <Avatar className="h-10 w-10">
-          <AvatarImage src="/avatar-anthony.jpg" alt="Anthony's Avatar" />
+          <AvatarImage src={profile} alt="Anthony's Avatar" />
           <AvatarFallback>A</AvatarFallback>
         </Avatar>
         {/* User Info */}
         <div>
-          <p className="text-sm text-gray-400">Hello,</p>
-          <p className="text-lg font-bold text-white">Anthony</p>
+          <div className="text-sm text-gray-400">Hello,</div>
+          <div className="text-lg font-bold text-white">Anthony</div>
         </div>
       </div>
 
