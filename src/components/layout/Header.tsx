@@ -1,31 +1,21 @@
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/Avatar";
 import categories from '../../assets/categories-icon.png';
 import profile from '../../assets/Profile.png.png';
-import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const handleCategoryClick = async () => {
-    const headers = {
-      'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ=',  // Example of sending an Authorization token
-      'Content-Type': 'application/json',         // Example of setting Content-Type
-      'X-Custom-Header': 'CustomHeaderValue'      // Any custom header you might need
-    };
-    try {
-      // Example of making an HTTP request on image click with axios
-      const response = await axios.post('http://104.42.224.240:8000/ask',{headers});
-      debugger;
-      console.log('Data received:', response.data);  // Handle the response data as needed
-    } catch (error) {
-      console.error('Error making HTTP request:', error);  // Handle any errors
-    }
+
+  const navigate = useNavigate();
+  const handleCategoryClick = () => {
+    navigate('/summaryredirection');
   };
   return (
     <header className="flex items-center justify-between bg-gray-800 h-[80px] p-4 rounded-lg shadow-lg">
       {/* Left Section */}
       <div className="flex items-center space-x-4">
-      <img style={{
-        width:'30px'
-      }} src={categories} onClick={handleCategoryClick} className="header-icon" />
+        <img style={{
+          width: '30px'
+        }} src={categories} onClick={handleCategoryClick} className="header-icon" />
         {/* Avatar */}
         <Avatar className="h-10 w-10">
           <AvatarImage src={profile} alt="Anthony's Avatar" />
