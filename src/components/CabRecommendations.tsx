@@ -123,10 +123,10 @@ const CabRecommendation = () => {
                   </div>
                   <div className="col-md-3">
                     <h3 className="text-lg font-semibold">Car Details</h3>
-                    <p className="text-sm text-gray-400">
+                    <div className="text-sm text-gray-400">
                       <div>Tesla</div>
                       <div> RY 01 AN 2435</div>
-                    </p>
+                    </div>
                   </div>
                   <div className="col-md-2">
                     <h2 style={priceStyle}>$169</h2>
@@ -134,10 +134,10 @@ const CabRecommendation = () => {
                   <div className="col-md-3" >
                     <div style={cabTopContainer}>
                       <img src={cabTop} style={{float: 'left'}}></img>
-                      <p className="text-sm text-gray-400 text-center" style={{marginTop: "16px "}}>
+                      <div className="text-sm text-gray-400 text-center" style={{marginTop: "16px "}}>
                         <div>Luxury</div>
                         <div>4 Seater</div>
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>
