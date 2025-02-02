@@ -101,7 +101,7 @@ const Summary = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px",
-                                marginTop: '30px'
+                                marginTop: '60px'
                             }} src={redirect1} className="header-icon" />
                             <p className="showText">Your Booking</p>
                             </div>
@@ -110,7 +110,7 @@ const Summary = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px",
-                                marginTop: '30px'
+                                marginTop: '60px'
                             }} src={redirect4} className="header-icon" />
                             <p className="showText">Flights</p>
                             </div>
@@ -120,7 +120,7 @@ const Summary = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px",
-                                marginTop: '30px'
+                                marginTop: '60px'
                             }} src={redirect2} className="header-icon" />
                             <p className="showText">Hotel</p>
                             </div>
@@ -128,7 +128,7 @@ const Summary = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px",
-                                marginTop: '30px'
+                                marginTop: '60px'
                             }} src={redirect5} className="header-icon" />
                             <p className="showText">Food & Beverage</p>
                             </div>
@@ -138,7 +138,7 @@ const Summary = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px",
-                                marginTop: '30px'
+                                marginTop: '60px'
                             }} src={redirect3} className="header-icon" />
                             <p className="showText">Tourist Attraction Places</p>
                             </div>
@@ -146,7 +146,7 @@ const Summary = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px",
-                                marginTop: '30px'
+                                marginTop: '60px'
                             }} src={redirect6}  className="header-icon" />
                             <p className="showText">Cab</p>
                             </div>
