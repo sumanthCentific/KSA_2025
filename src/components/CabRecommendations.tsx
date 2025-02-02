@@ -134,10 +134,10 @@ const CabRecommendation = () => {
                   <div className="col-md-3" >
                     <div style={cabTopContainer}>
                       <img src={cabTop} style={{float: 'left'}}></img>
-                      <div className="text-sm text-gray-400 text-center" style={{marginTop: "16px "}}>
+                      <p className="text-sm text-gray-400 text-center" style={{marginTop: "16px "}}>
                         <div>Luxury</div>
                         <div>4 Seater</div>
-                      </div>
+                      </p>
                     </div>
                   </div>
                 </div>

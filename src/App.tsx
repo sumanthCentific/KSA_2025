@@ -9,6 +9,7 @@ import CabRecommendation from './components/CabRecommendations';
 import FlightRecommendation from './components/FlightRecommendations';
 import RestaurantRecommendation from './components/RestaurantRecommendation';
 import ShoppingMallRecommendation from './components/ShoppingMallRecommendation';
+import ShoppingItems from './components/ui/ShoppingItems';
 
 function App() {
   return (
