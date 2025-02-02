@@ -20,7 +20,13 @@ const WelcomeNote = () => {
         </div>
         <div className="text-white fs-1" style={{ fontFamily:'Poppins' }}>future of Tourism</div>
         <div style={{ fontFamily:'Poppins' }}>Powered bt Lenovo & Centific</div><br/>
-       <Button className="btnGetStarted"  onClick={handleButtonClick} >Get Started</Button>
+       <Button className="btnGetStarted" style={{ fontFamily:'Poppins',
+            width: '189px',
+            lineHeight: '64px',
+            height: '64px',
+            fontSize: '22px',
+            fontWeight: '400',
+        }} onClick={handleButtonClick} >Get Started</Button>
        <Carousel />
     </section>
     
