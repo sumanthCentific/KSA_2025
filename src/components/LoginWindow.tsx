@@ -11,8 +11,9 @@ const LoginWindow = () => {
 
   return (
     <section
-      className="bg-dark custom-login-rounded h-[400px] w-[450px] d-flex flex-column align-items-center justify-content-start position-absolute top-50 start-50 translate-middle p-4"
+      className="custom-login-rounded h-[400px] w-[450px] d-flex flex-column align-items-center justify-content-start position-absolute top-50 start-50 translate-middle p-4"
       aria-labelledby="listening-heading"
+      style={{ height: "450px" }}
      
     >
       <div
@@ -47,6 +48,9 @@ const LoginWindow = () => {
             backgroundColor: "#777777", // Light gray background
             color: "white", // White text
             border: "none",
+            borderRadius: '8px',
+            height: '55px'
+
           }}
           value={"demo@centific.com"}
         />
@@ -71,6 +75,8 @@ const LoginWindow = () => {
             backgroundColor: "#777777", // Light gray background
             color: "white", // White text
             border: "none",
+            borderRadius: '8px',
+            height: '55px'
           }}
           value={"1234567"}
         />
@@ -95,7 +101,7 @@ const LoginWindow = () => {
         </label>
       </div>
 
-      <Button className="btnGetStarted w-100" onClick={handleLoginClick}>
+      <Button className="btnGetStarted w-100" style={{ height: "55px" }}onClick={handleLoginClick}>
         Login
       </Button>
     </section>

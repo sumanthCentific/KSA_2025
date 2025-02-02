@@ -4,7 +4,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: rgba(15, 15, 15, 1);
 }
 
 /* Custom component-specific styles */
@@ -121,8 +121,10 @@ canvas {
 }
 
 .custom-login-rounded{
-  border-radius: 20px; /* Adjust the radius as needed */
-  padding: 20px; /* Optional padding inside the section */
+  backdrop-filter: blur(60px);
+  background: linear-gradient(109.46deg, rgba(201, 201, 201, 0.8) -82.43%, rgba(196, 196, 196, 0.1) 100%) ;
+  border: 0px solid;
+  border-radius: 27px;
 }
 /* Add to your App.css or any other stylesheet */
 .form-control-custom {
