@@ -1,7 +1,7 @@
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 // import categories from '../../assets/categories-icon.png';
 import redirect1 from '../../assets/summaryRedirect1.png';
-import profile from '../../assets/Profile.png.png';
+import profile from '../../assets/Profile.png';
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -35,7 +35,13 @@ const Header = () => {
         aria-label="Search"
       >
         {/* Search Icon */}
-        <svg
+
+        <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.73047 22.8031C7.73047 22.3181 8.11413 21.925 8.5874 21.925L13.1577 21.925C13.631 21.925 14.0146 22.3181 14.0146 22.8031C14.0146 23.288 13.631 23.6812 13.1577 23.6812L8.5874 23.6812C8.11413 23.6812 7.73047 23.288 7.73047 22.8031Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.874023 11.0953C0.874023 5.4375 5.35006 0.85096 10.8715 0.85096C16.393 0.85096 20.8691 5.4375 20.8691 11.0953V16.3638C20.8691 18.4652 19.2065 20.1688 17.1557 20.1688H4.58739C2.53655 20.1688 0.874023 18.4652 0.874023 16.3638V11.0953ZM10.8715 2.60713C6.2966 2.60713 2.58788 6.4074 2.58788 11.0953V16.3638C2.58788 17.4953 3.48309 18.4126 4.58739 18.4126H17.1557C18.26 18.4126 19.1552 17.4953 19.1552 16.3638V11.0953C19.1552 6.4074 15.4465 2.60713 10.8715 2.60713Z" fill="white"/>
+</svg>
+
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -48,7 +54,7 @@ const Header = () => {
             strokeLinejoin="round"
             d="M15.75 15.75L21 21m-6.75-3a6.75 6.75 0 11-13.5 0 6.75 6.75 0 0113.5 0z"
           />
-        </svg>
+        </svg> */}
       </button>
     </header>
   );
