@@ -88,7 +88,7 @@ const SummaryRedirection = () => {
                                 width: "50px",
                                 height: "50px"
                             }} src={redirect4}  onClick={() => {    
-                                handleredirect1("hotels");
+                                handleredirect1("flight");
                              }} className="header-icon" />
                             </div>
                         </div>
@@ -102,7 +102,7 @@ const SummaryRedirection = () => {
                                 width: "50px",
                                 height: "50px"
                             }} src={redirect2}  onClick={() => {    
-                                handleredirect1("hotels");
+                                handleredirect1("map");
                              }} className="header-icon" />
                             </div>
                             <div className="section" style={{
@@ -114,7 +114,7 @@ const SummaryRedirection = () => {
                                 width: "50px",
                                 height: "50px"
                             }} src={redirect5}  onClick={() => {    
-                                handleredirect1("hotels");
+                                handleredirect1("food");
                              }} className="header-icon" />
                             </div>
                         </div>
@@ -128,7 +128,7 @@ const SummaryRedirection = () => {
                                 width: "50px",
                                 height: "50px"
                             }} src={redirect3}  onClick={() => {    
-                                handleredirect1("hotels");
+                                handleredirect1("location");
                              }} className="header-icon" />
                             </div>
                             <div className="section" style={{
@@ -140,7 +140,7 @@ const SummaryRedirection = () => {
                                 width: "50px",
                                 height: "50px"
                             }} src={redirect6}  onClick={() => {    
-                                handleredirect1("hotels");
+                                handleredirect1("cabs");
                              }} className="header-icon" />
                             </div>
                         </div>
