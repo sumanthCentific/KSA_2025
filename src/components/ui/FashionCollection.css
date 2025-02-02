@@ -1,0 +1,62 @@
+
+.fashion-header {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 70%; 
+    margin-bottom: 10px;
+}
+
+.fashion-icon {
+    width: 60px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+.collection-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.fashion-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 414px;
+    background: #ffffff05;
+    border: 1px solid #454545;
+    border-radius: 28px 0px 0px 0px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fashion-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.fashion-text h4,
+.fashion-text .price {
+    color: white; 
+}
+
+.fashion-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.small-heading {
+    font-size: 14px;
+    font-weight: bold;
+}
