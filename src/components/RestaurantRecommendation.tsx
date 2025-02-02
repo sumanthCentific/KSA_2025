@@ -1,54 +1,97 @@
 import { useState, useEffect } from "react";
 import Header from "./layout/Header";
 import ListeningSection from "./features/ListeningSection";
+import RestaurantCard from "./features/restaurant/restaurantCard";
+import { fetchRestaurants } from "../services/restaurantService";
+import { useNavigate } from 'react-router-dom';
 
 export interface RestaurantRecommendation {
+  name: string;
   image: string;
-  title: string;
-  location: string;
-  price: number;
-  distance: number;
-  availability: number;
-  features: string[];
+  unit: string;
+  price: string;
+  distance: string;
+  description: string;
+  origin: string;
+  originIcon: string;
+  type: string;
+  typeIcon: string;
+}
+
+const style= {
+  headerStyle: {
+      display:"grid",
+      gridTemplateColumns: '20px 1fr',
+      fontFamily: 'Poppins, sans-serif',
+  }
 }
 
 const RestaurantRecommendation = () => {
-//   const [cabRec, setCabRec] = useStat`e<CabRecommendation[]>([]);
+  const [restaurantRec, setRestaurantRec] = useState<RestaurantRecommendation[]>([]);
 
   useEffect(() => {
-    // Directly get the data from the imported JSON
-    // if (hotelsData?.hotels?.selection) {
-    //   // Map the JSON data to the structure expected by HotelCard
-    //   const mappedHotels: Hotel[] = hotelsData.hotels.selection.map((hotel: any) => ({
-    //     // Provide a default image (replace with actual image URL if available)
-    //     image: "https://via.placeholder.com/150",
-    //     // Use the JSON "name" as the "title"
-    //     title: hotel.name,
-    //     // Provide a default location (update if your JSON includes location)
-    //     location: "Riyadh, Saudi Arabia",
-    //     // Map the price field (renaming price_per_night to price)
-    //     price: hotel.price_per_night,
-    //     // Default values for additional fields expected by HotelCard:
-    //     distance: 2, // Example: distance in km
-    //     availability: 5, // Example: number of rooms available
-    //     features: ["Luxury", "Central location"] // Example: list of features
-    //   }));
+   const loadRestaurents = async () => {
+     const data = await fetchRestaurants();
+     setRestaurantRec(data);
+   };
 
-    //   setHotels(mappedHotels);
-    // }
+   loadRestaurents();
   }, []);
 
+  const navigate = useNavigate();
+
+    const handleBackButtonClick = () => {
+        navigate('/summary');
+    };
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto p-4 space-y-8">
-        <Header />
-        <main className="grid lg:grid-cols-3 gap-8 items-start">
-          <aside className="space-y-6">
-            <ListeningSection />
-          </aside>
-        </main>
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="max-w-6xl mx-auto p-4 space-y-8">
+          <Header />
+          <main className="grid lg:grid-cols-3 gap-8 items-start">
+            <aside className="space-y-6">
+              <ListeningSection />
+              <section
+                className="bg-gradient-to-b from-purple-500 to-gray-800 p-6 rounded-lg text-center shadow-lg"
+                aria-labelledby="profile-heading"
+              >
+                <h2
+                  id="profile-heading"
+                  className="text-sm font-medium text-gray-300 mb-4"
+                >
+                  Profile
+                </h2>
+                <p className="text-lg">
+                  I might visit Via Riyadh Shopping mall, can you show me a list of shops i can visit?
+                </p>
+              </section>
+            </aside>
+   
+            {/* Right Section */}
+            <section
+              className="lg:col-span-2 space-y-6"
+              aria-labelledby="foods-recommendations-heading"
+            >
+              <h4 style={style.headerStyle}>
+                <span><img src="src/assets/icons/backArrow.png" style={{cursor:'pointer'}} onClick={handleBackButtonClick}/></span>
+                <span>Restaruants Details</span></h4>
+              {restaurantRec.length === 0 ? (
+                <p
+                  className="text-center text-gray-400"
+                  role="status"
+                  aria-live="polite"
+                >
+                  Loading Restaruants...
+                </p>
+              ) : (
+                restaurantRec.map((foods, index) => (
+                  <RestaurantCard key={index} foods={foods} />
+                ))
+              )}
+            </section>
+          </main>
+        </div>
       </div>
-    </div>
   );
 };
 
