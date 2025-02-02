@@ -35,6 +35,7 @@ const labelStyle: React.CSSProperties = {
   color: "black"
 }
 
+
 const FlightRecommendation = () => {
 //   const [cabRec, setCabRec] = useStat`e<CabRecommendation[]>([]);
 
@@ -75,10 +76,11 @@ const FlightRecommendation = () => {
           >
             <p>Flight Recommendations </p>
 
-            <FlightLine from="San Hose" fromState="CA" to="Riyadh" toState="Ruh" />
+            <FlightLine from="San Hose" fromState="CA" to="Riyadh" toState="Ruh" isWhiteIcon={true} travelDate="Jan, 28, 2025"/>
 
+          { /* repeat this section for each flight recommendation  */ }
             <FlightResult chips={["Cheapest", "Popular"]}  labels={["Jan, 28, 2025", "2h30m"]} 
-              from="San Hose" fromState="CA" to="Riyadh" 
+              from="San Hose" fromState="CA" to="Riyadh" travelDate="Jan, 28, 2025"
               toState="Ruh" arrivalTime="09:30 AM" departureTime="11;45 AM"/>
           </section>
         </main>
@@ -101,6 +103,7 @@ const FlightResult = (props: {
   toState: string;
   arrivalTime?: string;
   departureTime?: string;
+  travelDate?: string;
 }) => {
   return (
     <div className="container" style={flightResultStyle}>
@@ -108,11 +111,19 @@ const FlightResult = (props: {
           {props.chips.map((chip) => <span style={chipStyle}>{chip}</span>)}
         </div>
         <Airlines airLineCompany="Emirates" class="Economy" />
-        <FlightLine from={props.from} fromState={props.fromState} to={props.to} toState={props.toState} arrivalTime={props.arrivalTime} departureTime={props.departureTime} />
-        <div style={{borderTop: "1px dashed rgba(218, 218, 218, 1)", paddingTop: "16px"}}>
-          {props.labels.map((chip) => <span style={labelStyle}>{chip}</span>)}
-        </div>
-    </div>
+        <FlightLine 
+        from={props.from} fromState={props.fromState} to={props.to} travelDate={props.travelDate}
+        toState={props.toState} arrivalTime={props.arrivalTime} departureTime={props.departureTime} />
+        <div style={{
+          height: "1px",
+          backgroundImage: "linear-gradient(90deg, #fff, #fff 75%, transparent 75%, transparent 100%)",
+          backgroundSize: "20px 1px",
+          border: "none"
+          }}></div>
+            <div >
+              {props.labels.map((chip) => <span style={labelStyle}>{chip}</span>)}
+            </div>
+      </div>
   );
 }
 
@@ -150,6 +161,8 @@ interface FlightLineProps {
   toState: string;
   arrivalTime?: string;
   departureTime?: string;
+  travelDate?: string;
+  isWhiteIcon?: boolean;
 }
 
 const FlightLine = (props: FlightLineProps) => {
@@ -162,7 +175,12 @@ const FlightLine = (props: FlightLineProps) => {
           <div>{props.departureTime}</div>
         </div>
       </div>
-      <div className="col-sm-7" style={{borderTop: "1px dashed rgba(184, 184, 184, 1)", height: "10px", marginTop: "28px"}}></div>
+      <div className="col-sm-7" style={{borderTop: "1px dashed rgba(184, 184, 184, 1)", height: "10px", marginTop: "28px"}}>
+        { props.travelDate &&<div style={{margin: "auto", width: "100px", textAlign: "center", position: "relative", bottom: "26px"}} >
+          <img src={props.isWhiteIcon ? flightIconWhite : flightIcon}  style={{margin: "auto"}}/>
+          <div className="text-sm text-gray-400" style={{fontSize: '12px'}}>{props.travelDate}</div>
+        </div> }
+      </div>
       <div className="col-sm-2" >
       <h3 className="text-lg font-semibold">{props.to}</h3>
         <div className="text-sm text-gray-400">
