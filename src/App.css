@@ -107,3 +107,6 @@ canvas {
   background-color: #f12222; /* Light gray background */
   color: white; /* White text */
 }
+.header-icon {
+  cursor: pointer;
+}

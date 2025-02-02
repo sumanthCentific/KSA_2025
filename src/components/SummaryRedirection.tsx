@@ -11,8 +11,8 @@ import { useNavigate } from "react-router-dom";
 const SummaryRedirection = () => {
 
     const navigate = useNavigate();
-    const handleredirect1 = () => {
-        navigate('/summaryredirection');
+    const handleredirect1 = (e:string) => {
+        navigate('/summary');
     };
 
     return (
@@ -75,7 +75,9 @@ const SummaryRedirection = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect1} onClick={handleredirect1} className="header-icon" />
+                            }} src={redirect1} onClick={() => {    
+                                handleredirect1("hotels");
+                             }} className="header-icon" />
                             </div>
                             <div className="section" style={{
                                 display: "flex",
@@ -85,7 +87,9 @@ const SummaryRedirection = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect4} onClick={handleredirect1} className="header-icon" />
+                            }} src={redirect4}  onClick={() => {    
+                                handleredirect1("hotels");
+                             }} className="header-icon" />
                             </div>
                         </div>
                         <div className="row">
@@ -97,7 +101,9 @@ const SummaryRedirection = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect2} onClick={handleredirect1} className="header-icon" />
+                            }} src={redirect2}  onClick={() => {    
+                                handleredirect1("hotels");
+                             }} className="header-icon" />
                             </div>
                             <div className="section" style={{
                                 display: "flex",
@@ -107,7 +113,9 @@ const SummaryRedirection = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect5} onClick={handleredirect1} className="header-icon" />
+                            }} src={redirect5}  onClick={() => {    
+                                handleredirect1("hotels");
+                             }} className="header-icon" />
                             </div>
                         </div>
                         <div className="row">
@@ -119,7 +127,9 @@ const SummaryRedirection = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect3} onClick={handleredirect1} className="header-icon" />
+                            }} src={redirect3}  onClick={() => {    
+                                handleredirect1("hotels");
+                             }} className="header-icon" />
                             </div>
                             <div className="section" style={{
                                 display: "flex",
@@ -129,7 +139,9 @@ const SummaryRedirection = () => {
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect6} onClick={handleredirect1} className="header-icon" />
+                            }} src={redirect6}  onClick={() => {    
+                                handleredirect1("hotels");
+                             }} className="header-icon" />
                             </div>
                         </div>
                     </div>
