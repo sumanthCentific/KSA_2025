@@ -7,13 +7,39 @@ import redirect4 from '../assets/flight.png';
 import redirect5 from '../assets/hotels.png';
 import redirect6 from '../assets/cabs.png';
 import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 
-const SummaryRedirection = () => {
+const sectionStyle: React.CSSProperties = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    cursor: "pointer"
+}
+
+const Summary = () => {
 
     const navigate = useNavigate();
-    const handleredirect1 = (e:string) => {
+    
+    const summaryRedirect = useCallback(() => {
         navigate('/summary');
-    };
+    }, [navigate]);
+
+    const hotelRecRediect = useCallback(() => {
+        navigate('/hotel-recommendations');
+    }, [navigate]);
+
+    const cabRecRediect = useCallback(() => {
+        navigate('/cab-recommendations');
+    }, [navigate]);
+
+    const flightRecRediect = useCallback(() => {
+        navigate('/flight-recommendations');
+    }, [navigate]);
+
+    const restaurantRecRedirect = useCallback(() => {
+        navigate('/restaurant-recommendations');
+    }, [navigate]);
+
 
     return (
         <div className="min-h-screen bg-gray-900 text-white">
@@ -41,7 +67,7 @@ const SummaryRedirection = () => {
                             <img style={{
                                 width: '40px',
                                 marginTop:'30px'
-                            }} src={redirect1} onClick={handleredirect1} className="header-icon" />
+                            }} src={redirect1} className="header-icon" />
                         </section>
                         <section
                             className="bg-gray-800 rounded-lg p-6 h-[150px] flex flex-col items-center space-y-4"
@@ -50,7 +76,7 @@ const SummaryRedirection = () => {
                             <img style={{
                                 width: '40px',
                                 marginTop:'30px'
-                            }} src={redirect2} onClick={handleredirect1} className="header-icon" />
+                            }} src={redirect2} className="header-icon" />
                         </section>
                         <section
                             className="bg-gray-800 rounded-lg p-6 h-[150px] flex flex-col items-center space-y-4"
@@ -59,7 +85,7 @@ const SummaryRedirection = () => {
                             <img style={{
                                 width: '40px',
                                 marginTop:'30px'
-                            }} src={redirect3} onClick={handleredirect1} className="header-icon" />
+                            }} src={redirect3} className="header-icon" />
                         </section>
                     </section> */}
 
@@ -67,81 +93,45 @@ const SummaryRedirection = () => {
                         width:'734px'
                     }}>
                         <div className="row">
-                            <div className="section" style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center"
-                            }}>
+                            <div className="section" style={sectionStyle} onClick={summaryRedirect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect1} onClick={() => {    
-                                handleredirect1("hotels");
-                             }} className="header-icon" />
+                            }} src={redirect1} className="header-icon" />
                             </div>
-                            <div className="section" style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center"
-                            }}>
+                            <div className="section" style={sectionStyle} onClick={flightRecRediect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect4}  onClick={() => {    
-                                handleredirect1("flight");
-                             }} className="header-icon" />
+                            }} src={redirect4} className="header-icon" />
                             </div>
                         </div>
                         <div className="row">
-                        <div className="section" style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center"
-                            }}>
+                        <div className="section" style={sectionStyle} onClick={hotelRecRediect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect2}  onClick={() => {    
-                                handleredirect1("map");
-                             }} className="header-icon" />
+                            }} src={redirect2} className="header-icon" />
                             </div>
-                            <div className="section" style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center"
-                            }}>
+                            <div className="section" style={sectionStyle} onClick={restaurantRecRedirect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect5}  onClick={() => {    
-                                handleredirect1("food");
-                             }} className="header-icon" />
+                            }} src={redirect5} className="header-icon" />
                             </div>
                         </div>
                         <div className="row">
-                        <div className="section" style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center"
-                            }}>
+                            <div className="section" style={sectionStyle} onClick={cabRecRediect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect3}  onClick={() => {    
-                                handleredirect1("location");
-                             }} className="header-icon" />
+                            }} src={redirect3} className="header-icon" />
                             </div>
-                            <div className="section" style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center"
-                            }}>
+                            <div className="section" style={sectionStyle} onClick={cabRecRediect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
-                            }} src={redirect6}  onClick={() => {    
-                                handleredirect1("cabs");
-                             }} className="header-icon" />
+                            }} src={redirect6}  className="header-icon" />
                             </div>
                         </div>
                     </div>
@@ -151,4 +141,4 @@ const SummaryRedirection = () => {
     );
 };
 
-export default SummaryRedirection;
+export default Summary;

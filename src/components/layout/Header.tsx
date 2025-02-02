@@ -8,7 +8,7 @@ const Header = () => {
 
   const navigate = useNavigate();
   const handleCategoryClick = () => {
-    navigate('/summaryredirection');
+    navigate('/summary');
   };
   return (
     <header className="flex items-center justify-between bg-gray-800 h-[80px] p-4 rounded-lg shadow-lg">
