@@ -93,13 +93,13 @@ const Summary = () => {
                         width:'734px'
                     }}>
                         <div className="row">
-                            <div className="section" style={sectionStyle} onClick={summaryRedirect}>
+                            <div className="section-summary" style={sectionStyle} onClick={summaryRedirect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
                             }} src={redirect1} className="header-icon" />
                             </div>
-                            <div className="section" style={sectionStyle} onClick={flightRecRediect}>
+                            <div className="section-summary" style={sectionStyle} onClick={flightRecRediect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
@@ -107,13 +107,13 @@ const Summary = () => {
                             </div>
                         </div>
                         <div className="row">
-                        <div className="section" style={sectionStyle} onClick={hotelRecRediect}>
+                        <div className="section-summary" style={sectionStyle} onClick={hotelRecRediect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
                             }} src={redirect2} className="header-icon" />
                             </div>
-                            <div className="section" style={sectionStyle} onClick={restaurantRecRedirect}>
+                            <div className="section-summary" style={sectionStyle} onClick={restaurantRecRedirect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
@@ -121,13 +121,13 @@ const Summary = () => {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="section" style={sectionStyle} onClick={cabRecRediect}>
+                            <div className="section-summary" style={sectionStyle} onClick={cabRecRediect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"
                             }} src={redirect3} className="header-icon" />
                             </div>
-                            <div className="section" style={sectionStyle} onClick={cabRecRediect}>
+                            <div className="section-summary" style={sectionStyle} onClick={cabRecRediect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px"

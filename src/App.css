@@ -69,7 +69,16 @@ body {
   display: flex;
   gap: 20px;
 }
-
+.section-summary {
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  width: 438px;
+  height: 230px;
+  border-radius: 28px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .section {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
   padding: 20px;
