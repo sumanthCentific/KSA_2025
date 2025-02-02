@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const LoginWindow = () => {
   const navigate = useNavigate();
   const handleLoginClick = () => {
-    navigate("/summaryredirection");
+    navigate("/summary");
   };
 
   return (
