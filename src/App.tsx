@@ -18,6 +18,7 @@ function App() {
         <Route path="/welcome" element={<GetStarted />} />
         <Route path="/hotelRecommendations" element={<HotelRecommendation />} />
         <Route path="/summary" element={<Summary />} />
+        <Route path="/shopping" element={<ShoppingItems />} />
         <Route path="/cabRecommendations" element={<CabRecommendation />} />
         <Route path="/flightRecommendations" element={<FlightRecommendation />} />
         <Route path="/restaurantRecommendations" element={<RestaurantRecommendation />} />
