@@ -13,13 +13,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<GetStarted />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/hotel-recommendations" element={<HotelRecommendation />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/welcome" element={<GetStarted />} />
+        <Route path="/hotelRecommendations" element={<HotelRecommendation />} />
         <Route path="/summary" element={<Summary />} />
-        <Route path="/cab-recommendations" element={<CabRecommendation />} />
-        <Route path="/flight-recommendations" element={<FlightRecommendation />} />
-        <Route path="/restaurant-recommendations" element={<RestaurantRecommendation />} />
+        <Route path="/cabRecommendations" element={<CabRecommendation />} />
+        <Route path="/flightRecommendations" element={<FlightRecommendation />} />
+        <Route path="/restaurantRecommendations" element={<RestaurantRecommendation />} />
       </Routes>
     </Router>
   )

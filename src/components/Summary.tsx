@@ -25,19 +25,19 @@ const Summary = () => {
     }, [navigate]);
 
     const hotelRecRediect = useCallback(() => {
-        navigate('/hotel-recommendations');
+        navigate('/hotelRecommendations');
     }, [navigate]);
 
     const cabRecRediect = useCallback(() => {
-        navigate('/cab-recommendations');
+        navigate('/cabRecommendations');
     }, [navigate]);
 
     const flightRecRediect = useCallback(() => {
-        navigate('/flight-recommendations');
+        navigate('/flightRecommendations');
     }, [navigate]);
 
     const restaurantRecRedirect = useCallback(() => {
-        navigate('/restaurant-recommendations');
+        navigate('/restaurantRecommendations');
     }, [navigate]);
 
 

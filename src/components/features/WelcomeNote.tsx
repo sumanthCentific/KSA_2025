@@ -11,7 +11,7 @@ import './Carousel.css'
 const WelcomeNote = () => {
     const navigate = useNavigate();
     const handleButtonClick = () => {
-        navigate('/login');
+        navigate('/summary');
     };
     return (
         <section className="rounded-lg p-5 h-[700px] w-[900px] d-flex flex-column align-items-center justify-content-start position-absolute top-50 start-50 translate-middle" aria-labelledby="listening-heading">
