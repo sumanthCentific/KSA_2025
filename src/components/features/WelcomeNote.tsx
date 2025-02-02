@@ -15,10 +15,10 @@ const WelcomeNote = () => {
     };
     return (
         <section className="rounded-lg p-5 h-[700px] w-[900px] d-flex flex-column align-items-center justify-content-start position-absolute top-50 start-50 translate-middle" aria-labelledby="listening-heading">
-        <div className="text-white fs-3" style={{ marginBottom: '2px', fontFamily:'Poppins' }}>
+        <div className="text-white fs-1" style={{ marginBottom: '2px', fontFamily:'Poppins' }}>
             <span className="firstSpancolor">Welcome</span> to the
         </div>
-        <div className="text-white fs-3" style={{ fontFamily:'Poppins' }}>future of Tourism</div>
+        <div className="text-white fs-1" style={{ fontFamily:'Poppins' }}>future of Tourism</div>
         <div style={{ fontFamily:'Poppins' }}>Powered bt Lenovo & Centific</div><br/>
        <Button className="btnGetStarted"  onClick={handleButtonClick} >Get Started</Button>
        <Carousel />
