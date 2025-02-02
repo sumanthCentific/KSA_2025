@@ -13,7 +13,8 @@ const sectionStyle: React.CSSProperties = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    cursor: "pointer"
+    cursor: "pointer",
+    flexDirection: 'column'
 }
 
 const Summary = () => {
@@ -96,42 +97,55 @@ const Summary = () => {
                             <div className="section-summary" style={sectionStyle} onClick={summaryRedirect}>
                             <img style={{
                                 width: "50px",
-                                height: "50px"
+                                height: "50px",
+                                marginTop: '30px'
                             }} src={redirect1} className="header-icon" />
+                            <p className="showText">Your Booking</p>
                             </div>
+
                             <div className="section-summary" style={sectionStyle} onClick={flightRecRediect}>
                             <img style={{
                                 width: "50px",
-                                height: "50px"
+                                height: "50px",
+                                marginTop: '30px'
                             }} src={redirect4} className="header-icon" />
+                            <p className="showText">Flights</p>
                             </div>
                         </div>
                         <div className="row">
                         <div className="section-summary" style={sectionStyle} onClick={hotelRecRediect}>
                             <img style={{
                                 width: "50px",
-                                height: "50px"
+                                height: "50px",
+                                marginTop: '30px'
                             }} src={redirect2} className="header-icon" />
+                            <p className="showText">Hotel</p>
                             </div>
                             <div className="section-summary" style={sectionStyle} onClick={restaurantRecRedirect}>
                             <img style={{
                                 width: "50px",
-                                height: "50px"
+                                height: "50px",
+                                marginTop: '30px'
                             }} src={redirect5} className="header-icon" />
+                            <p className="showText">Food & Beverage</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="section-summary" style={sectionStyle} onClick={cabRecRediect}>
                             <img style={{
                                 width: "50px",
-                                height: "50px"
+                                height: "50px",
+                                marginTop: '30px'
                             }} src={redirect3} className="header-icon" />
+                            <p className="showText">Tourist Attraction Places</p>
                             </div>
                             <div className="section-summary" style={sectionStyle} onClick={cabRecRediect}>
                             <img style={{
                                 width: "50px",
-                                height: "50px"
+                                height: "50px",
+                                marginTop: '30px'
                             }} src={redirect6}  className="header-icon" />
+                            <p className="showText">Cab</p>
                             </div>
                         </div>
                     </div>

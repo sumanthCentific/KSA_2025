@@ -79,6 +79,19 @@ body {
   border-radius: 28px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.section-summary:hover {
+  background-color: #BEB1B9;
+}
+.section-summary:hover > .showText{
+  color: #222222;
+  visibility:visible;
+}
+.showText{
+visibility: hidden;
+font-size: 20px;
+font-family: Poppins;
+padding-top: 10px;
+}
 .section {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
   padding: 20px;
