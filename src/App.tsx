@@ -8,6 +8,7 @@ import Summary from './components/Summary';
 import CabRecommendation from './components/CabRecommendations';
 import FlightRecommendation from './components/FlightRecommendations';
 import RestaurantRecommendation from './components/RestaurantRecommendation';
+import ShoppingMallRecommendation from './components/ShoppingMallRecommendation';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/cabRecommendations" element={<CabRecommendation />} />
         <Route path="/flightRecommendations" element={<FlightRecommendation />} />
         <Route path="/restaurantRecommendations" element={<RestaurantRecommendation />} />
+        <Route path="/shoppingMallRecommendations" element={<ShoppingMallRecommendation />} />
       </Routes>
     </Router>
   )

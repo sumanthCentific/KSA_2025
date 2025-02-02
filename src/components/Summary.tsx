@@ -40,6 +40,9 @@ const Summary = () => {
     const restaurantRecRedirect = useCallback(() => {
         navigate('/restaurantRecommendations');
     }, [navigate]);
+    const shoppingMallRecRedirect = useCallback(() => {
+        navigate('/shoppingMallRecommendations');
+    }, [navigate]);
 
 
     return (
@@ -131,7 +134,7 @@ const Summary = () => {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="section-summary" style={sectionStyle} onClick={cabRecRediect}>
+                            <div className="section-summary" style={sectionStyle} onClick={shoppingMallRecRedirect}>
                             <img style={{
                                 width: "50px",
                                 height: "50px",
