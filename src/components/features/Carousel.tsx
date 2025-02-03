@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import beachImage from "../../assets/beach-image.jpg";
-import foodImage from "../../assets/food-image.jpg";
-import leapImage from "../../assets/leap-image.jpg";
-import avatar01 from "../../assets/images/avatar-images.jpg";
-import avatar02 from "../../assets/images/avatar-images-2.jpg";
+import avatar01 from "../../assets/images/avatar01.jpg";
+import avatar02 from "../../assets/images/avatar02.jpg";
 
 
 const Carousel = () => {
-  const images = [avatar01,avatar02,beachImage, foodImage, leapImage];
+  const images = [avatar01, avatar02];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Function to go to the next image
@@ -28,8 +25,8 @@ const Carousel = () => {
 
   return (
     <div className="carousel-container">
-      <div className="carousel-wrapper mt-5">
-        <img src={images[currentIndex]} alt="carousel" className="carousel-image" />
+      <div className="carousel-wrapper mt-4">
+        <img width="" src={images[currentIndex]} alt="carousel" className="carousel-image" />
 
         {/* Navigation buttons */}
         <div className="carousel-buttons d-none">

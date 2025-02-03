@@ -18,8 +18,8 @@ const WelcomeNote = () => {
         </div>
         <div className="text-white fs-1" style={{ fontFamily:'Poppins', color: 'rgba(255, 255, 255, 1)'
  }}>future of Tourism</div>
-        <div style={{ fontFamily:'Poppins', fontSize: '18px', color: '#e5e7eb' }}>Powered bt Lenovo & Centific</div>
-        <div style={{ fontFamily:'Poppins', fontSize: '14px', color: '#e5e7eb', paddingTop: '20px' }}>In collaboration with Ministry of tourism Saudi Arabia</div>
+        <div style={{ fontFamily:'Poppins', fontSize: '18px', color: 'rgba(255, 255, 255, 1)' }}>Powered by Lenovo & Centific</div>
+        <div style={{ fontFamily:'Poppins', fontSize: '14px', color: '#e5e7eb', paddingTop: '5px' }}>In collaboration with Ministry of tourism Saudi Arabia</div>
        <Button className="btnGetStarted" style={{ fontFamily:'Poppins',
             width: '189px',
             lineHeight: '64px',
