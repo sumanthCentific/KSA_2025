@@ -15,7 +15,7 @@ const sectionStyle: React.CSSProperties = {
     alignItems: "center",
     cursor: "pointer",
     flexDirection: 'column',
-    height:'160px'
+    height:'140px'
 }
 
 const Summary = () => {
@@ -96,7 +96,7 @@ const Summary = () => {
 
                     <div className="container" style={{
                         width:'734px',
-                        marginLeft:'220px'
+                        marginLeft:'120px'
                     }}>
                         <div className="row">
                             <div className="section-summary" style={sectionStyle} onClick={summaryRedirect}>
