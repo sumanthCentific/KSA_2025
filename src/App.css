@@ -86,6 +86,12 @@ body {
   color: #222222;
   visibility:visible;
 }
+.header-icon > svg {
+  fill: #DDC6C6;
+}
+.section-summary:hover svg {
+  fill: #86667E !important;
+}
 .showText{
 visibility: hidden;
 font-size: 20px;
@@ -133,6 +139,7 @@ canvas {
 }
 .header-icon {
   cursor: pointer;
+  margin-top: 20px;;
 }
 .cardBorder {
   border: 1px solid #454545;
