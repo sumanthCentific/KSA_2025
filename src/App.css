@@ -4,7 +4,8 @@
 }
 
 body {
-  background: rgba(15, 15, 15, 1);
+  background: rgb(17 24 39 / var(--tw-bg-opacity, 1)) !important;
+  
 }
 
 /* Custom component-specific styles */
