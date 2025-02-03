@@ -72,8 +72,8 @@ const ShoppingMallRecommendation = () => {
               className="lg:col-span-2 space-y-6"
               aria-labelledby="foods-recommendations-heading"
             >
-              <h4 style={style.headerStyle}>
-                <span><img src="src/assets/icons/backArrow.png" style={{cursor:'pointer'}} onClick={handleBackButtonClick}/></span>
+              <h4 style={{ ...style.headerStyle, cursor: 'pointer' }}  onClick={handleBackButtonClick}>
+                <span><img src="src/assets/icons/backArrow.png"  /></span>
                 <span>Via Riyadh Shopping Mall Details</span></h4>
               {restaurantRec.length === 0 ? (
                 <p

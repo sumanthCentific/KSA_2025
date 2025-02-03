@@ -16,7 +16,7 @@ export const fetchHotels = (): Promise<Hotel[]> => {
       resolve([
         {
           title: "Top Recommendation",
-          image: "/jaudyan-hotel.jpg",
+          image: "src/assets/Hotel-1.png",
           location: "Jaudyan Hotel, Olaya St.",
           price: 300,
           distance: 257,
