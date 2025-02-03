@@ -18,27 +18,27 @@ export interface Foods {
       setTimeout(() => {
         resolve([
           {
-            name: "MR Chow Riyadh",
-            image: "src/assets/food-image.jpg",
-            price: '$1232 Per Person',
+            name: "Pull & Bear",
+            image: "src/assets/shoppingmall-1.png",
+            price: 'Category: Handbags, Clothes, luxury watches',
             distance: '2',
-            unit: 'Miles',
-            description: 'It is part of Inditex, owner of Zara and Bershka brands. The brand focuses on casual streetwear and accessories for young people at an affordable price tag.',
-            origin:'Asian',
+            unit: 'nd Floor',
+            description: 'It is part of Inditex, owner of Zara and Bershka brands. The brand focuses on casual streetwear and accessories for young people at an affordable price tag.',
+            origin:'Fashion',
             originIcon:'src/assets/icons/origin.png',
-            type:'Ambience',
+            type:'Luxury',
             typeIcon:'src/assets/icons/ambience.png'
           },
           {
-            name: "MR Chow Riyadh",
-            image: "src/assets/food-image.jpg",
-            price: '$2000 Per Person',
-            distance: '2',
-            unit: 'Miles',
-            description: 'It is part of Inditex, owner of Zara and Bershka brands. The brand focuses on casual streetwear and accessories for young people at an affordable price tag.',
-            origin:'Asian',
+            name: "Ingie",
+            image: "src/assets/shoppingmall-2.png",
+            price: 'Category: Handbags, Clothes, luxury watches',
+            distance: '1',
+            unit: 'st Floor',
+            description: 'It is part of Inditex, owner of Zara and Bershka brands. The brand focuses on casual streetwear and accessories for young people at an affordable price tag.',
+            origin:'Fashion',
             originIcon:'src/assets/icons/origin.png',
-            type:'Ambience',
+            type:'Luxury',
             typeIcon:'src/assets/icons/ambience.png'
           },
         ]);

@@ -33,7 +33,7 @@ const style = {
     },
     distance : {
         borderRadius: '10px',
-        width: '24%',
+        width: '30%',
         background: 'gray',
         padding: '10px',
         fontSize: '12px',
