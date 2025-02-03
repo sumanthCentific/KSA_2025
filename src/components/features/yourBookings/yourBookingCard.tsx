@@ -14,16 +14,64 @@ const style = {
   cardTitleStyle: {
     paddingBottom: "10px",
   },
-  cardGridStyle: {
-    padding: "20px",
-    borderRadius: "10px",
-    margin: "10px",
-    background: "#000000",
+  airportCardStyle: {
+width: '438px',
+height: '300px',
+marginBottom: '20px',
+padding: '28px 20px',
+flexDirection: 'column',
+justifyContent: 'center',
+alignItems: 'flex-start',
+gap: '13px',
+flexShrink: 0,
+    borderRadius: '28px',
+    background: 'rgba(255, 255, 255, 0.05)'
+  },
+  hotelCardStyle: {
+    display: 'flex',
+width: '438px',
+marginBottom: '20px',
+padding: '28px 20px',
+flexDirection: 'column',
+justifyContent: 'center',
+alignItems: 'flex-start',
+gap: '13px',
+flexShrink: 0,
+    borderRadius: '28px',
+    background: 'rgba(255, 255, 255, 0.05)'
+  },
+  filghtCardStyle: {
+    display: 'flex',
+width: '438px',
+height: '355px',
+marginBottom: '20px',
+padding: '28px 20px',
+flexDirection: 'column',
+justifyContent: 'center',
+alignItems: 'flex-start',
+gap: '13px',
+flexShrink: 0,
+    borderRadius: '28px',
+    background: 'rgba(255, 255, 255, 0.05)'
+  },
+  reataurantCardStyle: {
+    display: 'flex',
+width: '438px',
+height: '380px',
+marginBottom: '20px',
+padding: '28px 20px',
+flexDirection: 'column',
+justifyContent: 'center',
+alignItems: 'flex-start',
+flexShrink: 0,
+    borderRadius: '28px',
+    background: 'rgba(255, 255, 255, 0.05)'
   },
   cardInnerGridStyle: {
     padding: "15px",
     background: "#363638",
     borderRadius: "10px",
+    width: '100%'
   },
   cardInnerImageGridStyle: {
     display: "grid",
@@ -49,6 +97,7 @@ const style = {
     borderRadius: "10px",
     padding: "20px",
     fontSize: "12px",
+    marginLeft:'30px'
   },
   flightTickeStatus: {
     background: "#336749",
@@ -77,7 +126,7 @@ const style = {
   },
   flightTicketBookingDetails: {
     display: "grid",
-    gridTemplateColumns: "108px 100px 50px",
+    gridTemplateColumns: "130px 130px 50px",
     paddingBottom: '15px'
   },
   hotelGridStyle: {
@@ -95,7 +144,7 @@ const style = {
   },
   hotelBookingTimingGridStyle: {
     display: "grid",
-    gridTemplateColumns: "165px 10px 115px 30px",
+    gridTemplateColumns: "165px 10px 192px 30px",
     color: "#A0A0A0",
     paddingTop: "8px",
   },
@@ -110,7 +159,7 @@ const style = {
   },
   foodBookingTimingGridStyle: {
     display: "grid",
-    gridTemplateColumns: "80px 10px 200px 30px",
+    gridTemplateColumns: "80px 10px 275px 30px",
     color: "#A0A0A0",
     paddingTop: "8px",
   },
@@ -131,7 +180,7 @@ const style = {
 const YourBookingCard: React.FC<YourBookingCardProps> = ({ bookingsList }) => {
   return (
     <div style={style.gridStyle}>
-      <div style={style.cardGridStyle}>
+      <div style={style.airportCardStyle}>
         <h4 style={style.cardTitleStyle}>Airport Pick Up</h4>
         <div style={style.cardInnerGridStyle}>
           <h6>Airport Cab Pickup</h6>
@@ -146,7 +195,7 @@ const YourBookingCard: React.FC<YourBookingCardProps> = ({ bookingsList }) => {
           </div>
         </div>
       </div>
-      <div style={style.cardGridStyle}>
+      <div style={style.hotelCardStyle}>
         <div style={style.hotelGridStyle}>
           <h4 style={style.cardTitleStyle}>Hotel Reservation</h4>
           <div>
@@ -171,7 +220,7 @@ const YourBookingCard: React.FC<YourBookingCardProps> = ({ bookingsList }) => {
           </div>
         </div>
       </div>
-      <div style={style.cardGridStyle}>
+      <div style={style.filghtCardStyle}>
         <h4 style={style.cardTitleStyle}>Flight Booking</h4>
         <div style={style.flightTicketStyle}>
           <div>
@@ -210,7 +259,7 @@ const YourBookingCard: React.FC<YourBookingCardProps> = ({ bookingsList }) => {
           </div>
         </div>
       </div>
-      <div style={style.cardGridStyle}>
+      <div style={style.reataurantCardStyle}>
         <div style={style.hotelGridStyle}>
           <h4 style={style.cardTitleStyle}>F & B Reservation</h4>
           <div>

@@ -23,7 +23,7 @@ const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
   return (
     <Card className="bg-gray-800 p-3 rounded-lg">
       <div className="flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/3">
           {/* Hotel Image */}
           <img
             src={hotel.image}
@@ -31,7 +31,7 @@ const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
             className="h-32 w-full rounded-md object-cover"
           />
         </div>
-        <div className="w-full md:w-1/2  md:mt-0">
+        <div className="w-full md:w-1/2 md:mt-0">
           <h3
             className="text-lg font-semibold leading-7 text-left  px-3 py-1 rounded-md"
             style={{ fontFamily: "Poppins", color: "#6EAF89" }}
