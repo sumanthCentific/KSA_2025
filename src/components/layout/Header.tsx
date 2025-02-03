@@ -1,6 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar";
 // import categories from '../../assets/categories-icon.png';
-import redirect1 from '../../assets/summaryRedirect1.png';
+import redirect1 from '../../assets/menu.png';
 import profile from '../../assets/Profile.png';
 import { useNavigate } from "react-router-dom";
 
