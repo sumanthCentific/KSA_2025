@@ -10,6 +10,7 @@ import FlightRecommendation from './components/FlightRecommendations';
 import RestaurantRecommendation from './components/RestaurantRecommendation';
 import ShoppingMallRecommendation from './components/ShoppingMallRecommendation';
 import ShoppingItems from './components/ui/ShoppingItems';
+import YourBookingsRecommendation from './components/YourBookingRecommendations';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/flightRecommendations" element={<FlightRecommendation />} />
         <Route path="/restaurantRecommendations" element={<RestaurantRecommendation />} />
         <Route path="/shoppingMallRecommendations" element={<ShoppingMallRecommendation />} />
+        <Route path="/yourBookingsRecommendations" element={<YourBookingsRecommendation />} />
       </Routes>
     </Router>
   )

@@ -15,10 +15,6 @@ const sectionStyle: React.CSSProperties = {
 const Summary = () => {
 
     const navigate = useNavigate();
-    
-    const summaryRedirect = useCallback(() => {
-        navigate('/summary');
-    }, [navigate]);
 
     const hotelRecRediect = useCallback(() => {
         navigate('/hotelRecommendations');
@@ -37,6 +33,10 @@ const Summary = () => {
     }, [navigate]);
     const shoppingMallRecRedirect = useCallback(() => {
         navigate('/shoppingMallRecommendations');
+    }, [navigate]);
+
+    const yourBookingsRecRedirect = useCallback(() => {
+        navigate('/yourBookingsRecommendations');
     }, [navigate]);
 
 
@@ -93,7 +93,7 @@ const Summary = () => {
                         marginLeft:'130px'
                     }}>
                         <div className="row">
-                            <div className="section-summary" style={sectionStyle} onClick={summaryRedirect}>
+                            <div className="section-summary" style={sectionStyle} onClick={yourBookingsRecRedirect}>
                             <div className="header-icon">
                             <svg width="50" className="summary-icon" height="50" viewBox="0 0 71 71" fill="none">
                         <g clip-path="url(#clip0_305_993)">
