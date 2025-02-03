@@ -90,7 +90,7 @@ const handleBackButtonClick = () => {
 
 const flightResultStyle: React.CSSProperties = {
   borderRadius: '16px',
-  background: "#000",
+  background: 'rgba(31, 27, 32, 1)',
   boxShadow: '2px 4px 4px 0px rgba(0, 0, 0, 0.25)',
   margin: '10px'
 }
@@ -144,7 +144,7 @@ const Airlines = (props: AirLinesProps) => {
         </div>
         <h4 className="text-lg font-semibold">{props.airLineCompany}</h4>
       </div>
-      <div className="col-sm-7"></div>
+      <div className="col-sm-8"></div>
       <div className="col-sm-2" style={{ textAlign: 'right' }}>
         <div className="text-sm text-gray-400">
           <div>Class</div>

@@ -1,12 +1,16 @@
 import React from "react";
 import { Card } from "../../ui/Card";
 import { Foods } from "../../../services/restaurantService";
+import { useNavigate } from 'react-router-dom';
  
 interface shoppingMallCardProps {
   foods: Foods;
 }
  
 const style = {
+    shoppingItems: {
+      cursor: 'pointer',
+    },
     gridStyle: {
         display:"grid",
         gridTemplateColumns: '180px 1fr',
@@ -50,8 +54,15 @@ const style = {
 };
  
 const RestaurantCard: React.FC<shoppingMallCardProps> = ({ foods }) => {
+
+  const navigate = useNavigate();
+
+  const handleBackButtonClick = () => {
+      navigate('/shoppingItems');
+  };
   return (
     <Card className="bg-gray-800 p-6 rounded-lg" style={{fontFamily:'Poppins, sans-serif'}}>
+      <div style={style.shoppingItems} onClick={handleBackButtonClick}>
       <div style={style.iconGridStyle}>
         <div style={style.iconGridContentStyle}>
             <span><img src={foods.originIcon} alt={foods.origin} /></span>
@@ -76,6 +87,7 @@ const RestaurantCard: React.FC<shoppingMallCardProps> = ({ foods }) => {
                     <p style={{fontSize:'14px'}}>Price: {foods.price}</p>
                 </div>
         </div>
+      </div>
       </div>
     </Card>
   );
