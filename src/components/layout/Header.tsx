@@ -15,7 +15,8 @@ const Header = () => {
       {/* Left Section */}
       <div className="flex items-center space-x-4">
         <img style={{
-          width: '30px'
+          width: '40px',
+          marginTop: '0px'
         }} src={redirect1} onClick={handleCategoryClick} className="header-icon" />
         {/* Avatar */}
         <Avatar className="h-10 w-10">

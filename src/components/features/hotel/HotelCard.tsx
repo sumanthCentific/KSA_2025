@@ -38,7 +38,7 @@ const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
           >
             Top Recommendation
           </h3>
-          <div>
+          <div style={{ paddingLeft: "10px"}}>
             <span style={chipStyle}>
               <img
                 style={{ float: "left", marginRight: "3px" }}
@@ -76,7 +76,7 @@ const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
         </span>
 
         <div className="flex space-x-4">
-          <p className="text-gray-400 pr-4 flex-1 border-r-[1.65px] border-r-[#FFFFFF1A]">
+          <div className="text-gray-400 pr-4 flex-1 border-r-[1.65px] border-r-[#FFFFFF1A]">
             <span
               className="font-poppins text-lg font-normal text-left"
               style={{
@@ -109,9 +109,9 @@ const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
             >
               ${hotel.price} CAD/night
             </span>
-          </p>
+          </div>
 
-          <p className="text-gray-400 pr-4 flex-1 border-r-[1.65px] border-r-[#FFFFFF1A] ">
+          <div className="text-gray-400 pr-4 flex-1 border-r-[1.65px] border-r-[#FFFFFF1A] ">
             <span
               className="font-poppins text-lg font-normal leading-[18px] tracking-[-0.67px] text-left"
               style={{
@@ -140,9 +140,9 @@ const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
               }}>
               {hotel.distance} km away
             </span>
-          </p>
+          </div>
 
-          <p className="text-gray-400 pr-4 flex-1">
+          <div className="text-gray-400 pr-4 flex-1">
             <span
               className="font-poppins text-lg font-normal leading-[18px] tracking-[-0.67px] text-left"
               style={{
@@ -171,7 +171,7 @@ const HotelCard: React.FC<HotelCardProps> = ({ hotel }) => {
               }}>
               {hotel.availability} left
             </span>
-          </p>
+          </div>
         </div>
       </div>
     </Card>

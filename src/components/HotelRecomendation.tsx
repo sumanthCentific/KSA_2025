@@ -75,10 +75,10 @@ const HotelRecommendation = () => {
               >
                 Profile
               </h2>
-              <p className="text-lg">
+              <div className="text-lg">
                 Please find me some{" "}
                 <span className="font-bold">hotel stays</span> in Riyadh...
-              </p>
+              </div>
             </section>
           </aside>
 
@@ -87,17 +87,17 @@ const HotelRecommendation = () => {
             className="lg:col-span-2 space-y-6"
             aria-labelledby="recommendations-heading"
           >
-            <h4 style={{ ...style.headerStyle, cursor: 'pointer' }}  onClick={handleBackButtonClick}>
+            <h4 style={{ ...style.headerStyle, cursor: 'pointer', verticalAlign: 'middle', alignItems: "center" }}  onClick={handleBackButtonClick}>
                 <span><img src="src/assets/icons/backArrow.png"  /></span>
                 <span>Hotel Recommendations</span></h4>
             {hotels.length === 0 ? (
-              <p
+              <div
                 className="text-center text-gray-400"
                 role="status"
                 aria-live="polite"
               >
                 Loading hotels...
-              </p>
+              </div>
             ) : (
               hotels.map((hotel, index) => (
                 <HotelCard key={index} hotel={hotel} />
