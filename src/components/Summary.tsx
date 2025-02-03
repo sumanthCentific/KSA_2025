@@ -14,7 +14,8 @@ const sectionStyle: React.CSSProperties = {
     justifyContent: "center",
     alignItems: "center",
     cursor: "pointer",
-    flexDirection: 'column'
+    flexDirection: 'column',
+    height:'160px'
 }
 
 const Summary = () => {
@@ -48,14 +49,14 @@ const Summary = () => {
     return (
         <div className="min-h-screen bg-gray-900 text-white">
             {/* Main container with width constraints */}
-            <div className="max-w-6xl mx-auto p-4 space-y-8">
+            <div className="mx-auto p-4 space-y-8">
                 {/* Header */}
                 <Header />
 
                 {/* Main Content */}
                 <main className="grid lg:grid-cols-3 gap-8 items-start">
                     {/* Left Section */}
-                    <aside className="space-y-6">
+                    <aside className="space-y-8">
                     </aside>
                     {/* Right Section */}
                     {/* <section
@@ -94,7 +95,8 @@ const Summary = () => {
                     </section> */}
 
                     <div className="container" style={{
-                        width:'734px'
+                        width:'734px',
+                        marginLeft:'220px'
                     }}>
                         <div className="row">
                             <div className="section-summary" style={sectionStyle} onClick={summaryRedirect}>

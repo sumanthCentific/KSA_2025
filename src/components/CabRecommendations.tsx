@@ -6,6 +6,7 @@ import flame from '../assets/flame.svg';
 import cabTop from '../assets/cab-top.svg';
 import mapPin from '../assets/map-pin.svg';
 import recenter from '../assets/current-loc-icon.svg';
+import { useNavigate } from "react-router";
 
 export interface CabRecommendation {
   image: string;
@@ -15,6 +16,14 @@ export interface CabRecommendation {
   distance: number;
   availability: number;
   features: string[];
+}
+
+const style= {
+  headerStyle: {
+      display:"grid",
+      gridTemplateColumns: '20px 1fr',
+      fontFamily: 'Poppins, sans-serif',
+  }
 }
 
 const locationStyle: React.CSSProperties = {
@@ -65,6 +74,10 @@ const cabTopContainer: React.CSSProperties = {
 }
 
 const CabRecommendation = () => {
+  const navigate = useNavigate();
+  const handleBackButtonClick = () => {
+    navigate('/summary');
+};
 //   const [cabRec, setCabRec] = useStat`e<CabRecommendation[]>([]);
 
   useEffect(() => {
@@ -92,7 +105,7 @@ const CabRecommendation = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto p-4 space-y-8">
+      <div className="mx-auto p-4 space-y-8">
         <Header />
         <main className="grid lg:grid-cols-3 gap-8 items-start">
           <aside className="space-y-6">
@@ -101,8 +114,13 @@ const CabRecommendation = () => {
           <section
             className="lg:col-span-2 space-y-6"
             aria-labelledby="recommendations-heading"
+            style={{
+             fontFamily: 'Poppins'
+            }}
           >
-            <p>Cab Recommendations </p>
+            <h4 style={style.headerStyle}>
+                <span><img src="src/assets/icons/backArrow.png" style={{cursor:'pointer'}} onClick={handleBackButtonClick}/></span>
+                <span>Cab Recommendations</span></h4>
             <div style={locationStyle}>
               {/* <img src={recenter} /> */}
               King Khalid Internation Airport - Airport Rd, Riyadh, Saudi Arabia</div>
