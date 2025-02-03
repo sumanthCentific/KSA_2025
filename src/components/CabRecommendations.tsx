@@ -6,6 +6,7 @@ import flame from '../assets/flame.svg';
 import cabTop from '../assets/cab-top.svg';
 import mapPin from '../assets/map-pin.svg';
 import recenter from '../assets/current-loc-icon.svg';
+import currentLocationPin from '../assets/current-loc-icon.svg';
 import { useNavigate } from "react-router";
 
 export interface CabRecommendation {
@@ -36,14 +37,17 @@ const locationStyle: React.CSSProperties = {
   height: "auto",
   lineHeight: "52px",
   padding: "0px 15px",
-  borderRadius: "15px"
+  borderRadius: "15px",
+  marginTop: "35px"
 }
 
 const cabStyle: React.CSSProperties = {
   border: "1px solid rgba(69, 69, 69, 1)",
   height: "auto",
   borderRadius: "28px",
-  padding: "16px 20px"
+  padding: "16px 20px",
+  float: "left",
+  width: "100%",
 }
 
 const chipStyle: React.CSSProperties = {
@@ -122,13 +126,35 @@ const CabRecommendation = () => {
             <h4 style={style.headerStyle} onClick={handleBackButtonClick}>
                 <span><img src="src/assets/icons/backArrow.png"/></span>
                 <span>Cab Recommendations</span></h4>
-            <div style={locationStyle}>
-              {/* <img src={recenter} /> */}
-              King Khalid Internation Airport - Airport Rd, Riyadh, Saudi Arabia</div>
-            <div style={locationStyle}
-            >
-              {/* <img src={mapPin} /> */}
-              Riyadh Front Exhibition & Conference Center (RFECC)</div>
+
+            <div style={{width: "100%", float: "left"}}>
+              <div style={{width: "10%", float: "left", paddingTop: "37px"}}>
+                <div style={{float: "left", background: "white", borderRadius: "50%", width: "57px", height: "57px"}}>
+                  <img src={currentLocationPin} style={{margin: "16px auto", width: "30px"}}/>
+                </div>
+                <div style={{position: "relative", borderLeft: '1px dotted white', height: "20px", top: "60px", left: "27px" }}></div>
+                <div style={{float: "left", background: "white", borderRadius: "50%", width: "57px", height: "57px", marginTop: "26px"}}>
+                  <img src={mapPin} style={{margin: "16px auto", width: "20px"}}/>
+                </div>
+              </div>
+              <div style={{width: "90%", float: "left"}}>
+                <div style={locationStyle}>
+                  {/* <img src={recenter} /> */}
+                  King Khalid Internation Airport - Airport Rd, Riyadh, Saudi Arabia</div>
+                <div style={locationStyle}
+                >
+                  {/* <img src={mapPin} /> */}
+                  Riyadh Front Exhibition & Conference Center (RFECC)</div>
+              </div>
+            </div>
+            {/* <div>
+              <div style={locationStyle}>
+                King Khalid Internation Airport - Airport Rd, Riyadh, Saudi Arabia</div>
+              <div style={locationStyle}
+              >
+                Riyadh Front Exhibition & Conference Center (RFECC)</div>
+            </div> */}
+            
             {/* map below container for each result */}
             <div style={cabStyle}> 
               <div >

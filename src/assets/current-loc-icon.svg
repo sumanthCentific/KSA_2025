@@ -1,32 +1,9 @@
-<div style={cabStyle}> 
-              <div >
-              <span style={chipStyle}><img style={{float: "left", marginRight: "3px", marginTop: "3px"}} src={flame}/>Popular</span>
-              <span style={chipStyle}><img style={{float: "left", marginRight: "3px", marginTop: "3px"}} src={flame}/>Luxury</span>
-              </div>
-              <div className="container" style={{padding: "16px 0", marginTop: "8px"}}>
-                <div className="row">
-                  <div className="col-md-2">
-                    <img style={cabImgStyle} src={car} alt="cab"/>
-                  </div>
-                  <div className="col-md-3">
-                    <h3 className="text-lg font-semibold">Car Details</h3>
-                    <p className="text-sm text-gray-400">
-                      <div>Tesla</div>
-                      <div> RY 01 AN 2435</div>
-                    </p>
-                  </div>
-                  <div className="col-md-2">
-                    <h2 style={priceStyle}>$169</h2>
-                  </div>
-                  <div className="col-md-3" >
-                    <div style={cabTopContainer}>
-                      <img src={cabTop} style={{float: 'left'}}></img>
-                      <p className="text-sm text-gray-400 text-center" style={{marginTop: "16px "}}>
-                        <div>Luxury</div>
-                        <div>4 Seater</div>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4518 13.3896L9.16312 0.908935C8.84255 0.554514 8.21935 0.742803 8.14165 1.21756L6.9256 8.64816C6.90817 8.75468 6.85908 8.85532 6.78424 8.93798L1.57096 14.6963C1.22876 15.0742 1.51244 15.6423 2.02509 15.6056L20.0258 14.3178C20.5097 14.2831 20.7623 13.7328 20.4518 13.3896Z" fill="url(#paint0_linear_80_916)"/>
+<defs>
+<linearGradient id="paint0_linear_80_916" x1="8.89635" y1="19.1393" x2="15.6143" y2="3.0338" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7B1050"/>
+<stop offset="1" stop-color="#421343"/>
+</linearGradient>
+</defs>
+</svg>
