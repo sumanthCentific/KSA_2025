@@ -25,17 +25,18 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    font-family: Poppins;
 }
 
 .fashion-item {
+    border-radius: 16px;
+    border: 1px solid #454545;
+    background: rgba(255, 255, 255, 0.02);
     display: flex;
     align-items: center;
     gap: 20px;
     width: 414px;
-    background: #ffffff05;
-    border: 1px solid #454545;
-    border-radius: 28px 0px 0px 0px;
-    padding: 20px;
+    padding: 15px;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

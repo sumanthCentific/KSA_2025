@@ -10,8 +10,24 @@ import fashionIcon from '../../assets/images/fashionicon.png';
 import luxury from '../../assets/images/luxury.png';
 import Header from '../layout/Header';
 import ListeningSection from '../features/ListeningSection';
+import { useNavigate } from 'react-router-dom';
 
 const ShoppingItems = () => {
+
+  const navigate = useNavigate();
+
+  const style= {
+    headerStyle: {
+        display:"grid",
+        gridTemplateColumns: '20px 1fr',
+        fontFamily: 'Poppins, sans-serif',
+    }
+  }
+
+  const handleBackButtonClick = () => {
+      navigate('/shoppingMallRecommendations');
+  };
+  
   return (
 
     <div className="min-h-screen bg-gray-900 text-white">
@@ -25,7 +41,9 @@ const ShoppingItems = () => {
           className="lg:col-span-2 space-y-6"
           aria-labelledby="recommendations-heading"
         >
-          <p>Pulls and bear Items </p>
+          <h4 style={{ ...style.headerStyle, cursor: 'pointer' }} onClick={handleBackButtonClick}>
+          <span><img src="src/assets/icons/backArrow.png"  /></span>
+          <span>Pulls and bear Items</span></h4>
     <div className="fashion-collection">
       <div className="fashion-header">
         <img src={fashionIcon} alt="Fashion Icon" className="fashion-icon" />
