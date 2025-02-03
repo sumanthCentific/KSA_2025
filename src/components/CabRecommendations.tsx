@@ -137,7 +137,7 @@ const CabRecommendation = () => {
               </div>
               <div className="container" style={{padding: "16px 0", marginTop: "8px"}}>
                 <div className="row">
-                  <div className="col-md-3">
+                  <div className="col-md-4">
                     <img style={cabImgStyle} src={car} alt="cab"/>
                   </div>
                   <div className="col-md-2">
@@ -147,7 +147,7 @@ const CabRecommendation = () => {
                       <div> RY 01 AN 2435</div>
                     </div>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-md-2">
                     <h2 style={priceStyle}>$169</h2>
                   </div>
                   <div className="col-md-3" >
@@ -170,7 +170,7 @@ const CabRecommendation = () => {
               </div>
               <div className="container" style={{padding: "16px 0", marginTop: "8px"}}>
                 <div className="row">
-                  <div className="col-md-3">
+                  <div className="col-md-4">
                     <img style={cabImgStyle} src={car} alt="cab"/>
                   </div>
                   <div className="col-md-2">
@@ -180,7 +180,7 @@ const CabRecommendation = () => {
                       <div> RY 01 AN 2435</div>
                     </p>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-md-2">
                     <h2 style={priceStyle}>$169</h2>
                   </div>
                   <div className="col-md-3" >
@@ -203,7 +203,7 @@ const CabRecommendation = () => {
               </div>
               <div className="container" style={{padding: "16px 0", marginTop: "8px"}}>
                 <div className="row">
-                  <div className="col-md-3">
+                  <div className="col-md-4">
                     <img style={cabImgStyle} src={car} alt="cab"/>
                   </div>
                   <div className="col-md-2">
@@ -213,7 +213,7 @@ const CabRecommendation = () => {
                       <div> RY 01 AN 2435</div>
                     </p>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-md-2">
                     <h2 style={priceStyle}>$169</h2>
                   </div>
                   <div className="col-md-3" >
