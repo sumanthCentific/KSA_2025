@@ -3,6 +3,7 @@ import Header from "./layout/Header";
 import ListeningSection from "./features/ListeningSection";
 import flightIcon from '../assets/icons/flight icon.svg';
 import flightIconWhite from '../assets/icons/flight icon white.svg';
+import { useNavigate } from 'react-router-dom';
 
 export interface FlightRecommendation {
   image: string;
@@ -12,6 +13,13 @@ export interface FlightRecommendation {
   distance: number;
   availability: number;
   features: string[];
+}
+const style= {
+  headerStyle: {
+      display:"grid",
+      gridTemplateColumns: '20px 1fr',
+      fontFamily: 'Poppins, sans-serif',
+  }
 }
 
 const chipStyle: React.CSSProperties = {
@@ -38,25 +46,15 @@ const labelStyle: React.CSSProperties = {
 
 const FlightRecommendation = () => {
 //   const [cabRec, setCabRec] = useStat`e<CabRecommendation[]>([]);
+const [hotels, setHotels] = useState<FlightRecommendation[]>([]);
+const navigate = useNavigate();
+
+const handleBackButtonClick = () => {
+  navigate('/summary');
+};
 
   useEffect(() => {
-    // Directly get the data from the imported JSON
-    // if (hotelsData?.hotels?.selection) {
-    //   // Map the JSON data to the structure expected by HotelCard
-    //   const mappedHotels: Hotel[] = hotelsData.hotels.selection.map((hotel: any) => ({
-    //     // Provide a default image (replace with actual image URL if available)
-    //     image: "https://via.placeholder.com/150",
-    //     // Use the JSON "name" as the "title"
-    //     title: hotel.name,
-    //     // Provide a default location (update if your JSON includes location)
-    //     location: "Riyadh, Saudi Arabia",
-    //     // Map the price field (renaming price_per_night to price)
-    //     price: hotel.price_per_night,
-    //     // Default values for additional fields expected by HotelCard:
-    //     distance: 2, // Example: distance in km
-    //     availability: 5, // Example: number of rooms available
-    //     features: ["Luxury", "Central location"] // Example: list of features
-    //   }));
+   
 
     //   setHotels(mappedHotels);
     // }
@@ -74,8 +72,9 @@ const FlightRecommendation = () => {
             className="lg:col-span-2 space-y-6"
             aria-labelledby="recommendations-heading"
           >
-            <p>Flight Recommendations </p>
-
+            <h4 style={{ ...style.headerStyle, cursor: 'pointer', verticalAlign: 'middle', alignItems: "center" }}  onClick={handleBackButtonClick}>
+            <span><img src="src/assets/icons/backArrow.png"  /></span>
+            <span>Flight Recommendations</span></h4>
             <FlightLine from="San Hose" fromState="CA" to="Riyadh" toState="Ruh" isWhiteIcon={true} travelDate="Jan, 28, 2025"/>
 
           { /* repeat this section for each flight recommendation  */ }
@@ -90,8 +89,10 @@ const FlightRecommendation = () => {
 };
 
 const flightResultStyle: React.CSSProperties = {
-  boxShadow: "2px 3px 4px 0px rgba(0, 0, 0, 0.15)",
-  background: "rgba(31, 27, 32, 1)"
+  borderRadius: '16px',
+  background: "#000",
+  boxShadow: '2px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+  margin: '10px'
 }
 
 const FlightResult = (props: {
@@ -118,7 +119,8 @@ const FlightResult = (props: {
           height: "1px",
           backgroundImage: "linear-gradient(90deg, #fff, #fff 75%, transparent 75%, transparent 100%)",
           backgroundSize: "20px 1px",
-          border: "none"
+          border: "none",
+          margin: '0px 10px 0px 10px'
           }}></div>
             <div >
               {props.labels.map((chip) => <span style={labelStyle}>{chip}</span>)}
@@ -135,7 +137,7 @@ interface AirLinesProps {
 
 const Airlines = (props: AirLinesProps) => {
   return (
-    <div className="row">
+    <div className="row" style={{ gap: '0px' , padding: '0px 10px 0px 10px' }}>
       <div className="col-sm-2">
         <div className="text-sm text-gray-400">
           <div>Airlines</div>
@@ -143,7 +145,7 @@ const Airlines = (props: AirLinesProps) => {
         <h4 className="text-lg font-semibold">{props.airLineCompany}</h4>
       </div>
       <div className="col-sm-7"></div>
-      <div className="col-sm-2" >
+      <div className="col-sm-2" style={{ textAlign: 'right' }}>
         <div className="text-sm text-gray-400">
           <div>Class</div>
         </div>
@@ -167,7 +169,7 @@ interface FlightLineProps {
 
 const FlightLine = (props: FlightLineProps) => {
   return (
-    <div className="row">
+    <div className="row" style={{gap: '0px', padding: '0px 10px 0px 10px'}}>
       <div className="col-sm-2">
         <h3 className="text-lg font-semibold">{props.from}</h3>
         <div className="text-sm text-gray-400">
@@ -175,13 +177,13 @@ const FlightLine = (props: FlightLineProps) => {
           <div>{props.departureTime}</div>
         </div>
       </div>
-      <div className="col-sm-7" style={{borderTop: "1px dashed rgba(184, 184, 184, 1)", height: "10px", marginTop: "28px"}}>
+      <div className="col-sm-8" style={{borderTop: "1px dashed rgba(184, 184, 184, 1)", height: "10px", marginTop: "28px"}}>
         { props.travelDate &&<div style={{margin: "auto", width: "100px", textAlign: "center", position: "relative", bottom: "26px"}} >
           <img src={props.isWhiteIcon ? flightIconWhite : flightIcon}  style={{margin: "auto"}}/>
           <div className="text-sm text-gray-400" style={{fontSize: '12px'}}>{props.travelDate}</div>
         </div> }
       </div>
-      <div className="col-sm-2" >
+      <div className="col-sm-2" style={{textAlign: 'right'}} >
       <h3 className="text-lg font-semibold">{props.to}</h3>
         <div className="text-sm text-gray-400">
           <div>{props.toState}</div>
