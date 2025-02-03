@@ -52,7 +52,6 @@ body {
   color: 'white';
   border: 'none';
   cursor: 'pointer';
-  font-size: '16px';
   background: linear-gradient(90deg, #FA75F8 0%, #9E6EE6 100%); /* Linear gradient */
   color: white; /* White text color */
 }

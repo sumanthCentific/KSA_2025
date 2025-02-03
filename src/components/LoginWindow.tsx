@@ -44,6 +44,7 @@ const LoginWindow = () => {
           className="form-control form-control-custom"
           id="userName"
           name="userName"
+          tab-index="0"
           style={{
             backgroundColor: "#777777", // Light gray background
             color: "white", // White text
@@ -71,6 +72,7 @@ const LoginWindow = () => {
           className="form-control form-control-custom"
           id="password"
           name="password"
+          tab-index="0"
           style={{
             backgroundColor: "#777777", // Light gray background
             color: "white", // White text
@@ -83,12 +85,13 @@ const LoginWindow = () => {
       </div>
 
       <div
-        className="d-flex justify-content-end mb-1"
+        className="d-flex justify-content-end mb-2"
         style={{ width: "100%" }}
       >
         <label
           htmlFor="forgetpassword"
           className="form-label text-white"
+          tab-index="0"
           style={{
             color: "#FFFFFF", // White text color
             fontSize: "16px", // Font size
@@ -101,7 +104,7 @@ const LoginWindow = () => {
         </label>
       </div>
 
-      <Button className="btnGetStarted w-100" style={{ height: "55px" }}onClick={handleLoginClick}>
+      <Button tab-index="2" className="btnGetStarted w-100" style={{ height: "55px", fontSize: '18px' }} onClick={handleLoginClick}>
         Login
       </Button>
     </section>
