@@ -23,6 +23,7 @@ const style= {
       display:"grid",
       gridTemplateColumns: '20px 1fr',
       fontFamily: 'Poppins, sans-serif',
+      cursor:'pointer'
   }
 }
 
@@ -118,8 +119,8 @@ const CabRecommendation = () => {
              fontFamily: 'Poppins'
             }}
           >
-            <h4 style={style.headerStyle}>
-                <span><img src="src/assets/icons/backArrow.png" style={{cursor:'pointer'}} onClick={handleBackButtonClick}/></span>
+            <h4 style={style.headerStyle} onClick={handleBackButtonClick}>
+                <span><img src="src/assets/icons/backArrow.png"/></span>
                 <span>Cab Recommendations</span></h4>
             <div style={locationStyle}>
               {/* <img src={recenter} /> */}
@@ -136,17 +137,17 @@ const CabRecommendation = () => {
               </div>
               <div className="container" style={{padding: "16px 0", marginTop: "8px"}}>
                 <div className="row">
-                  <div className="col-md-2">
+                  <div className="col-md-3">
                     <img style={cabImgStyle} src={car} alt="cab"/>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-md-2">
                     <h3 className="text-lg font-semibold">Car Details</h3>
                     <div className="text-sm text-gray-400">
                       <div>Tesla</div>
                       <div> RY 01 AN 2435</div>
                     </div>
                   </div>
-                  <div className="col-md-2">
+                  <div className="col-md-3">
                     <h2 style={priceStyle}>$169</h2>
                   </div>
                   <div className="col-md-3" >
@@ -169,17 +170,17 @@ const CabRecommendation = () => {
               </div>
               <div className="container" style={{padding: "16px 0", marginTop: "8px"}}>
                 <div className="row">
-                  <div className="col-md-2">
+                  <div className="col-md-3">
                     <img style={cabImgStyle} src={car} alt="cab"/>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-md-2">
                     <h3 className="text-lg font-semibold">Car Details</h3>
                     <p className="text-sm text-gray-400">
                       <div>Tesla</div>
                       <div> RY 01 AN 2435</div>
                     </p>
                   </div>
-                  <div className="col-md-2">
+                  <div className="col-md-3">
                     <h2 style={priceStyle}>$169</h2>
                   </div>
                   <div className="col-md-3" >
@@ -202,17 +203,17 @@ const CabRecommendation = () => {
               </div>
               <div className="container" style={{padding: "16px 0", marginTop: "8px"}}>
                 <div className="row">
-                  <div className="col-md-2">
+                  <div className="col-md-3">
                     <img style={cabImgStyle} src={car} alt="cab"/>
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-md-2">
                     <h3 className="text-lg font-semibold">Car Details</h3>
                     <p className="text-sm text-gray-400">
                       <div>Tesla</div>
                       <div> RY 01 AN 2435</div>
                     </p>
                   </div>
-                  <div className="col-md-2">
+                  <div className="col-md-3">
                     <h2 style={priceStyle}>$169</h2>
                   </div>
                   <div className="col-md-3" >
