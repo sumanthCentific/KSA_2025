@@ -1,33 +1,26 @@
-import  { useEffect, useState } from 'react';
-import './FashionCollection.css';
-import designerHandbag from '../../assets/images/handbag.png';
-import jacket from '../../assets/images/jacket.png';
-import gown from '../../assets/images/gown.png';
-import sportjack from '../../assets/images/sportj.png';
-import wallet from '../../assets/images/wallet.png';
-import watch from '../../assets/images/watch.png';
-import fashionIcon from '../../assets/images/fashionicon.png';
-import luxury from '../../assets/images/luxury.png';
-import Header from '../layout/Header';
-import ListeningSection from '../features/ListeningSection';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from "react";
+//import "./FashionCollection.css";
+import { useNavigate } from "react-router-dom";
+import Header from "../layout/Header";
+import ListeningSection from "../features/ListeningSection";
+import { Mall, fetchMallData } from "../../services/mallService";
+import flame from "../../assets/flame.svg";
+import designerHandbag from "../../assets/images/handbag.png";
+import jacket from "../../assets/images/jacket.png";
+import gown from "../../assets/images/gown.png";
+import sportjack from "../../assets/images/sportj.png";
+import wallet from "../../assets/images/wallet.png";
+import watch from "../../assets/images/watch.png";
 
-import { Mall, fetchMallData } from '../../services/mallService';
+const chipStyle =
+  "inline-flex items-center justify-center px-3 py-2 text-xs white cardBorder   rounded-full border-gray-400 bg-opacity-40 bg-[#B969A2]";
 
 const ShoppingItems = () => {
   const navigate = useNavigate();
   const [data, setData] = useState<Mall[]>([]);
 
-  const style = {
-    headerStyle: {
-      display: "grid",
-      gridTemplateColumns: '20px 1fr',
-      fontFamily: 'Poppins, sans-serif',
-    }
-  };
-
   const handleBackButtonClick = () => {
-    navigate('/shoppingMallRecommendations');
+    navigate("/shoppingMallRecommendations");
   };
 
   // Fetch mall data on component mount
@@ -37,16 +30,19 @@ const ShoppingItems = () => {
     });
   }, []);
 
-  const getItemImage = (itemName: string) => {
-    if (itemName === "Designer Handbag") return designerHandbag;
-    if (itemName === "Men’s Jacket" || itemName === "Mens Jacket") return jacket;
-    if (itemName === "Sports Jacket") return sportjack;
-    if (itemName === "Luxury Watch") return watch;
-    if (itemName === "Wallet") return wallet;
-    if (itemName === "Evening Gown") return gown;
-    // Default image if none match
-    return designerHandbag;
+  // Simplified image lookup for items
+  const itemImages: Record<string, string> = {
+    "Designer Handbag": designerHandbag,
+    "Men’s Jacket": jacket,
+    "Mens Jacket": jacket,
+    "Sports Jacket": sportjack,
+    "Luxury Watch": watch,
+    Wallet: wallet,
+    "Evening Gown": gown,
   };
+
+  const getItemImage = (itemName: string) =>
+    itemImages[itemName] || designerHandbag;
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -61,34 +57,50 @@ const ShoppingItems = () => {
             aria-labelledby="recommendations-heading"
           >
             <h4
-              style={{ ...style.headerStyle, cursor: 'pointer' }}
+              className="flex items-center space-x-2 text-lg font-semibold cursor-pointer text-left font-poppins text-xl leading-7"
               onClick={handleBackButtonClick}
             >
-              <span>
-                <img src="src/assets/icons/backArrow.png" alt="Back" />
-              </span>
-              <span>Pulls and bear Items</span>
+              <img
+                src="src/assets/icons/backArrow.png"
+                alt="Back"
+                className="w-4 h-4"
+              />
+              <span>Pulls and Bear Items</span>
             </h4>
-            <div className="fashion-collection">
-              <div className="fashion-header">
-                <img src={fashionIcon} alt="Fashion Icon" className="fashion-icon" />
-                <img src={luxury} alt="Luxury Icon" className="fashion-icon" />
+
+            <div className=" p-3 cardBorder rounded-[28px]" >
+              <div className="flex space-x-2 pb-2">
+                <span className={chipStyle}>
+                  <img src={flame} alt="flame" className="w-5 h-5 mr-2" />
+                  Fashion
+                </span>
+                <span className={chipStyle}>
+                  <img src={flame} alt="flame" className="w-5 h-5 mr-2 mt-1" />
+                  Luxury
+                </span>
               </div>
 
-              <div className="items-grid">
+              <div className="items-grid mt-3 grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-2 ">
                 {data.map((mall, mallIndex) =>
                   mall.shops
                     .filter((shop) => shop.category === "fashion")
                     .flatMap((shop) =>
                       shop.items.map((item, index) => (
-                        <div className="fashion-item" key={`${mallIndex}-${index}`}>
+                        <div className="fashion-item bg-opacity-10 cardBorder rounded-[28px] shadow-md p-4 flex items-center">
+                          {/* Left Image */}
                           <img
                             src={getItemImage(item.name)}
                             alt={item.name}
+                            className="w-1/3 h-auto rounded-md"
                           />
-                          <div className="fashion-text">
-                            <p className="small-heading">{item.name}</p>
-                            <p className="price">Price: ${item.price.toFixed(2)}</p>
+                          {/* Right Text */}
+                          <div className="fashion-text ml-4 flex-1 text-left">
+                            <p className="small-heading text-sm font-semibold text-white leading-none">
+                              {item.name}
+                            </p>
+                            <p className="price text-xs text-white-400 ">
+                              Price: ${item.price.toFixed(2)}
+                            </p>
                           </div>
                         </div>
                       ))
