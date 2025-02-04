@@ -15,63 +15,65 @@ const style = {
     paddingBottom: "10px",
   },
   airportCardStyle: {
-width: '438px',
-height: '300px',
-marginBottom: '20px',
-padding: '28px 20px',
-flexDirection: 'column',
-justifyContent: 'center',
-alignItems: 'flex-start',
-gap: '13px',
-flexShrink: 0,
-    borderRadius: '28px',
-    background: 'rgba(255, 255, 255, 0.05)'
+    width: "438px",
+    height: "320px",
+    marginBottom: "20px",
+    padding: "28px 20px",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    gap: "13px",
+    flexShrink: 0,
+    borderRadius: "28px",
+    background: "rgba(255, 255, 255, 0.05)",
   },
   hotelCardStyle: {
-    display: 'flex',
-width: '438px',
-marginBottom: '20px',
-padding: '28px 20px',
-flexDirection: 'column',
-justifyContent: 'center',
-alignItems: 'flex-start',
-gap: '13px',
-flexShrink: 0,
-    borderRadius: '28px',
-    background: 'rgba(255, 255, 255, 0.05)'
+    display: "flex",
+    width: "438px",
+    marginBottom: "20px",
+    padding: "28px 20px",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    gap: "13px",
+    flexShrink: 0,
+    borderRadius: "28px",
+    background: "rgba(255, 255, 255, 0.05)",
   },
   filghtCardStyle: {
-    display: 'flex',
-width: '438px',
-height: '355px',
-marginBottom: '20px',
-padding: '28px 20px',
-flexDirection: 'column',
-justifyContent: 'center',
-alignItems: 'flex-start',
-gap: '13px',
-flexShrink: 0,
-    borderRadius: '28px',
-    background: 'rgba(255, 255, 255, 0.05)'
+    display: "flex",
+    width: "438px",
+    height: "410px",
+    marginBottom: "20px",
+    padding: "28px 20px",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    gap: "13px",
+    flexShrink: 0,
+    borderRadius: "28px",
+    background: "rgba(255, 255, 255, 0.05)",
+    transform: "translateY(-50px)",
   },
   reataurantCardStyle: {
-    display: 'flex',
-width: '438px',
-height: '380px',
-marginBottom: '20px',
-padding: '28px 20px',
-flexDirection: 'column',
-justifyContent: 'center',
-alignItems: 'flex-start',
-flexShrink: 0,
-    borderRadius: '28px',
-    background: 'rgba(255, 255, 255, 0.05)'
+    display: "flex",
+    width: "438px",
+    height: "360px",
+    marginBottom: "20px",
+    padding: "28px 20px",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    flexShrink: 0,
+    borderRadius: "28px",
+    background: "rgba(255, 255, 255, 0.05)",
   },
   cardInnerGridStyle: {
     padding: "15px",
     background: "#363638",
     borderRadius: "10px",
-    width: '100%'
+    width: "100%",
+    height: '220px'
   },
   cardInnerImageGridStyle: {
     display: "grid",
@@ -79,17 +81,18 @@ flexShrink: 0,
     alignItems: "center",
   },
   cardInnerNumberStyle: {
-    paddingBottom: "10px",
+    paddingBottom: "20px",
     color: "#259292",
     fontSize: "30px",
     fontWeight: "500",
+    paddingTop: '5px'
   },
   cardLocationStyle: {
     display: "inline-flex",
     fontSize: "12px",
     fontWeight: "100",
     color: "#A0A0A0",
-    padding: "5px 0px",
+    padding: "10px 0px",
   },
   flightTicketStyle: {
     backgroundColor: "#ffffff",
@@ -97,7 +100,8 @@ flexShrink: 0,
     borderRadius: "10px",
     padding: "20px",
     fontSize: "12px",
-    marginLeft:'30px'
+    marginLeft: "30px",
+    height: '285px'
   },
   flightTickeStatus: {
     background: "#336749",
@@ -105,9 +109,9 @@ flexShrink: 0,
     borderRadius: "25px",
     color: "white",
     marginRight: "10px",
-    display: 'inline-block',
-    lineHeight: '10px',
-    height: '30px'
+    display: "inline-block",
+    lineHeight: "10px",
+    height: "30px",
   },
   flightTicketDate: {
     color: "#666666",
@@ -116,25 +120,27 @@ flexShrink: 0,
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    margin: "15px 0",
+    margin: "20px 0",
   },
   flightTicketDeparture: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    position: 'relative'
+    position: "relative",
   },
   flightTicketBookingDetails: {
     display: "grid",
     gridTemplateColumns: "130px 130px 50px",
-    paddingBottom: '15px'
+    paddingBottom: "20px",
   },
   hotelGridStyle: {
     fontSize: "12px",
   },
   hotelReservationImageStyle: {
     borderRadius: "10px",
-    fontSize: "14px ",
+    fontSize: "14px",
+    height: "200px",
+    width: "100%",
   },
   hotelNameGridStyle: {
     display: "grid",
@@ -164,17 +170,17 @@ flexShrink: 0,
     paddingTop: "8px",
   },
   airlineOriginIcon: {
-    display: 'inline-block',
-    position: 'absolute',
-    top: '0px',
-    left: '40px'
+    display: "inline-block",
+    position: "absolute",
+    top: "0px",
+    left: "40px",
   },
   airlineDestinationIcon: {
-    display: 'inline-block',
-    position: 'absolute',
-    top: '0px',
-    right: '40px'
-  }
+    display: "inline-block",
+    position: "absolute",
+    top: "0px",
+    right: "40px",
+  },
 };
 
 const YourBookingCard: React.FC<YourBookingCardProps> = ({ bookingsList }) => {
@@ -230,28 +236,34 @@ const YourBookingCard: React.FC<YourBookingCardProps> = ({ bookingsList }) => {
           <div style={style.flightTicketRoute}>
             <div style={style.flightTicketDeparture}>
               <span>San</span>
-              <img src="src/assets/icons/airline-origin.png"  style={style.airlineOriginIcon}/>
+              <img
+                src="src/assets/icons/airline-origin.png"
+                style={style.airlineOriginIcon}
+              />
               <span>09:30</span>
             </div>
             <div style={style.flightTicketDeparture}>
-                <img src="src/assets/icons/airline-arrow.png" />
+              <img src="src/assets/icons/airline-arrow.png" />
               <span>1h 30m</span>
             </div>
             <div style={style.flightTicketDeparture}>
               <span>Riy </span>
-              <img src="src/assets/icons/airline-destination.png"  style={style.airlineDestinationIcon} />
+              <img
+                src="src/assets/icons/airline-destination.png"
+                style={style.airlineDestinationIcon}
+              />
               <span>12:30</span>
             </div>
           </div>
           <div style={style.flightTicketBookingDetails}>
             <div>
-              <div style={{paddingBottom:'5px'}}>Boarding time</div> 8:00 am
+              <div style={{ paddingBottom: "10px" }}>Boarding time</div> 8:00 am
             </div>
             <div>
-              <div style={{paddingBottom:'5px'}}>Seat</div> 34A
+              <div style={{ paddingBottom: "10px" }}>Seat</div> 34A
             </div>
             <div>
-              <div style={{paddingBottom:'5px'}}>Class</div> Business
+              <div style={{ paddingBottom: "10px" }}>Class</div> Business
             </div>
           </div>
           <div>
