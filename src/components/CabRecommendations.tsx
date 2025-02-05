@@ -19,12 +19,12 @@ export interface CabRecommendation {
   features: string[];
 }
 
-const style= {
+const style = {
   headerStyle: {
-      display:"grid",
-      gridTemplateColumns: '20px 1fr',
-      fontFamily: 'Poppins, sans-serif',
-      cursor:'pointer'
+    display: "grid",
+    gridTemplateColumns: '20px 1fr',
+    fontFamily: 'Poppins, sans-serif',
+    cursor: 'pointer'
   }
 }
 
@@ -73,8 +73,8 @@ const priceStyle: React.CSSProperties = {
 const cabTopContainer: React.CSSProperties = {
   background: "rgba(247, 247, 247, 0.9)",
   borderRadius: "38px",
- margin: "0 10px",
-  padding: "27px 7px", 
+  margin: "0 10px",
+  padding: "27px 7px",
   border: "3px solid rgba(123, 16, 80, 1)"
 }
 
@@ -82,8 +82,8 @@ const CabRecommendation = () => {
   const navigate = useNavigate();
   const handleBackButtonClick = () => {
     navigate('/summary');
-};
-//   const [cabRec, setCabRec] = useStat`e<CabRecommendation[]>([]);
+  };
+  //   const [cabRec, setCabRec] = useStat`e<CabRecommendation[]>([]);
 
   useEffect(() => {
     // Directly get the data from the imported JSON
@@ -120,33 +120,37 @@ const CabRecommendation = () => {
             className="lg:col-span-2 space-y-6"
             aria-labelledby="recommendations-heading"
             style={{
-             fontFamily: 'Poppins'
+              fontFamily: 'Poppins'
             }}
           >
             <h4 style={style.headerStyle} onClick={handleBackButtonClick}>
-                <span><img src="src/assets/icons/backArrow.png"/></span>
-                <span>Cab Recommendations</span></h4>
+              <span><img src="src/assets/icons/backArrow.png" /></span>
+              <span>Cab Recommendations</span></h4>
 
-            <div style={{width: "100%", float: "left"}}>
-              <div style={{width: "10%", float: "left", paddingTop: "37px"}}>
-                <div style={{float: "left", background: "white", borderRadius: "50%", width: "57px", height: "57px"}}>
-                  <img src={currentLocationPin} style={{margin: "16px auto", width: "30px"}}/>
+            <div style={{ width: "100%", display: "flex", flexDirection: "row", alignItems: "center" }}>
+              {/* Left section with images */}
+              <div style={{ width: "10%", display: "flex", flexDirection: "column", alignItems: "center", paddingTop: "37px" }}>
+                <div style={{ background: "white", borderRadius: "50%", width: "57px", height: "57px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <img src={currentLocationPin} style={{ width: "30px" }} />
                 </div>
-                <div style={{position: "relative", borderLeft: '1px dotted white', height: "20px", top: "60px", left: "27px" }}></div>
-                <div style={{float: "left", background: "white", borderRadius: "50%", width: "57px", height: "57px", marginTop: "26px"}}>
-                  <img src={mapPin} style={{margin: "16px auto", width: "20px"}}/>
+                <div style={{ position: "relative", borderLeft: '1px dotted white', height: "20px", top: "60px", left: "27px" }}></div>
+                <div style={{ background: "white", borderRadius: "50%", width: "57px", height: "57px", marginTop: "26px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <img src={mapPin} style={{ width: "20px" }} />
                 </div>
               </div>
-              <div style={{width: "90%", float: "left"}}>
+
+              {/* Right section with location labels */}
+              <div style={{ width: "90%", display: "flex", flexDirection: "column", justifyContent: "center", marginLeft: "10px" }}>
                 <div style={locationStyle}>
-                  {/* <img src={recenter} /> */}
-                  King Khalid Internation Airport - Airport Rd, Riyadh, Saudi Arabia</div>
-                <div style={locationStyle}
-                >
-                  {/* <img src={mapPin} /> */}
-                  Riyadh Front Exhibition & Conference Center (RFECC)</div>
+                  King Khalid International Airport - Airport Rd, Riyadh, Saudi Arabia
+                </div>
+                <div style={locationStyle}>
+                  Riyadh Front Exhibition & Conference Center (RFECC)
+                </div>
               </div>
             </div>
+
+
             {/* <div>
               <div style={locationStyle}>
                 King Khalid Internation Airport - Airport Rd, Riyadh, Saudi Arabia</div>
@@ -154,107 +158,111 @@ const CabRecommendation = () => {
               >
                 Riyadh Front Exhibition & Conference Center (RFECC)</div>
             </div> */}
-            
+
             {/* map below container for each result */}
-            <div style={cabStyle}> 
+            <div style={cabStyle}>
               <div >
-              <span style={chipStyle}><img style={{float: "left", marginRight: "3px", marginTop: "3px"}} src={flame}/>Popular</span>
-              <span style={chipStyle}><img style={{float: "left", marginRight: "3px", marginTop: "3px"}} src={flame}/>Luxury</span>
+                <span style={chipStyle}><img style={{ float: "left", marginRight: "3px", marginTop: "3px" }} src={flame} />Popular</span>
+                <span style={chipStyle}><img style={{ float: "left", marginRight: "3px", marginTop: "3px" }} src={flame} />Luxury</span>
               </div>
-              <div className="container" style={{padding: "16px 0", marginTop: "8px"}}>
-                <div className="row">
-                  <div className="col-md-4">
-                    <img style={cabImgStyle} src={car} alt="cab"/>
+              <div className="container" style={{ padding: "16px 0", marginTop: "8px" }}>
+                <div className="row d-flex flex-wrap">
+                  <div className="col-md-4 col-12">
+                    <img style={cabImgStyle} src={car} alt="cab" />
                   </div>
-                  <div className="col-md-2">
-                    <h3 className="text-lg font-semibold">Car Details</h3>
-                    <div className="text-sm text-gray-400">
-                      <div>Tesla</div>
-                      <div> RY 01 AN 2435</div>
-                    </div>
-                  </div>
-                  <div className="col-md-2">
-                    <h2 style={priceStyle}>$169</h2>
-                  </div>
-                  <div className="col-md-3" >
-                    <div style={cabTopContainer}>
-                      <img src={cabTop} style={{float: 'left'}}></img>
-                      <p className="text-sm text-gray-400 text-center" style={{marginTop: "16px "}}>
-                        <div>Luxury</div>
-                        <div>4 Seater</div>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div style={cabStyle}> 
-              <div >
-              <span style={chipStyle}><img style={{float: "left", marginRight: "3px", marginTop: "3px"}} src={flame}/>Popular</span>
-              <span style={chipStyle}><img style={{float: "left", marginRight: "3px", marginTop: "3px"}} src={flame}/>Luxury</span>
-              </div>
-              <div className="container" style={{padding: "16px 0", marginTop: "8px"}}>
-                <div className="row">
-                  <div className="col-md-4">
-                    <img style={cabImgStyle} src={car} alt="cab"/>
-                  </div>
-                  <div className="col-md-2">
+                  <div className="col-md-2 col-12">
                     <h3 className="text-lg font-semibold">Car Details</h3>
                     <p className="text-sm text-gray-400">
                       <div>Tesla</div>
-                      <div> RY 01 AN 2435</div>
+                      <div>RY 01 AN 2435</div>
                     </p>
                   </div>
-                  <div className="col-md-2">
+                  <div className="col-md-2 col-12">
                     <h2 style={priceStyle}>$169</h2>
                   </div>
-                  <div className="col-md-3" >
+                  <div className="col-md-3 col-12 d-none d-md-block">
                     <div style={cabTopContainer}>
-                      <img src={cabTop} style={{float: 'left'}}></img>
-                      <p className="text-sm text-gray-400 text-center" style={{marginTop: "16px "}}>
+                      <img src={cabTop} style={{ float: 'left' }} alt="cab top" />
+                      <p className="text-sm text-gray-400 text-center" style={{ marginTop: '16px' }}>
                         <div>Luxury</div>
                         <div>4 Seater</div>
                       </p>
                     </div>
                   </div>
                 </div>
+
+
               </div>
             </div>
 
-            <div style={cabStyle}> 
+            <div style={cabStyle}>
               <div >
-              <span style={chipStyle}><img style={{float: "left", marginRight: "3px", marginTop: "3px"}} src={flame}/>Popular</span>
-              <span style={chipStyle}><img style={{float: "left", marginRight: "3px", marginTop: "3px"}} src={flame}/>Luxury</span>
+                <span style={chipStyle}><img style={{ float: "left", marginRight: "3px", marginTop: "3px" }} src={flame} />Popular</span>
+                <span style={chipStyle}><img style={{ float: "left", marginRight: "3px", marginTop: "3px" }} src={flame} />Luxury</span>
               </div>
-              <div className="container" style={{padding: "16px 0", marginTop: "8px"}}>
-                <div className="row">
-                  <div className="col-md-4">
-                    <img style={cabImgStyle} src={car} alt="cab"/>
+              <div className="container" style={{ padding: "16px 0", marginTop: "8px" }}>
+                <div className="row d-flex flex-wrap">
+                  <div className="col-md-4 col-12">
+                    <img style={cabImgStyle} src={car} alt="cab" />
                   </div>
-                  <div className="col-md-2">
+                  <div className="col-md-2 col-12">
                     <h3 className="text-lg font-semibold">Car Details</h3>
                     <p className="text-sm text-gray-400">
                       <div>Tesla</div>
-                      <div> RY 01 AN 2435</div>
+                      <div>RY 01 AN 2435</div>
                     </p>
                   </div>
-                  <div className="col-md-2">
+                  <div className="col-md-2 col-12">
                     <h2 style={priceStyle}>$169</h2>
                   </div>
-                  <div className="col-md-3" >
+                  <div className="col-md-3 col-12 d-none d-md-block">
                     <div style={cabTopContainer}>
-                      <img src={cabTop} style={{float: 'left'}}></img>
-                      <p className="text-sm text-gray-400 text-center" style={{marginTop: "16px "}}>
+                      <img src={cabTop} style={{ float: 'left' }} alt="cab top" />
+                      <p className="text-sm text-gray-400 text-center" style={{ marginTop: '16px' }}>
                         <div>Luxury</div>
                         <div>4 Seater</div>
                       </p>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
-            
+
+            <div style={cabStyle}>
+              <div >
+                <span style={chipStyle}><img style={{ float: "left", marginRight: "3px", marginTop: "3px" }} src={flame} />Popular</span>
+                <span style={chipStyle}><img style={{ float: "left", marginRight: "3px", marginTop: "3px" }} src={flame} />Luxury</span>
+              </div>
+              <div className="container" style={{ padding: "16px 0", marginTop: "8px" }}>
+                <div className="row d-flex flex-wrap">
+                  <div className="col-md-4 col-12">
+                    <img style={cabImgStyle} src={car} alt="cab" />
+                  </div>
+                  <div className="col-md-2 col-12">
+                    <h3 className="text-lg font-semibold">Car Details</h3>
+                    <p className="text-sm text-gray-400">
+                      <div>Tesla</div>
+                      <div>RY 01 AN 2435</div>
+                    </p>
+                  </div>
+                  <div className="col-md-2 col-12">
+                    <h2 style={priceStyle}>$169</h2>
+                  </div>
+                  <div className="col-md-3 col-12 d-none d-md-block">
+                    <div style={cabTopContainer}>
+                      <img src={cabTop} style={{ float: 'left' }} alt="cab top" />
+                      <p className="text-sm text-gray-400 text-center" style={{ marginTop: '16px' }}>
+                        <div>Luxury</div>
+                        <div>4 Seater</div>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </section>
         </main>
       </div>
