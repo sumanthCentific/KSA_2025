@@ -2,24 +2,61 @@ import { useState, useEffect } from "react";
 import Header from "./layout/Header";
 import ListeningSection from "./features/ListeningSection";
 import HotelCard from "./features/hotel/HotelCard";
-import { fetchHotels, Hotel } from "../services/hotelService";
+// Import the JSON data directly
+import hotelsData from "./features/hotel/hotels.json"
+import { useNavigate } from 'react-router-dom';
+// Define the interface for our hotel data expected by HotelCard
+export interface Hotel {
+  image: string;
+  title: string;
+  location: string;
+  price: number;
+  distance: number;
+  availability: number;
+  features: string[];
+}
+const style= {
+  headerStyle: {
+      display:"grid",
+      gridTemplateColumns: '20px 1fr',
+      fontFamily: 'Poppins, sans-serif',
+  }
+}
 
 const HotelRecommendation = () => {
   const [hotels, setHotels] = useState<Hotel[]>([]);
+  const navigate = useNavigate();
 
+  const handleBackButtonClick = () => {
+    navigate('/summary');
+};
   useEffect(() => {
-    const loadHotels = async () => {
-      const data = await fetchHotels();
-      setHotels(data);
-    };
+    // Directly get the data from the imported JSON
+    if (hotelsData?.hotels?.selection) {
+      // Map the JSON data to the structure expected by HotelCard
+      const mappedHotels: Hotel[] = hotelsData.hotels.selection.map((hotel: any) => ({
+        // Provide a default image (replace with actual image URL if available)
+        image: "src/assets/Hotel-1.png",
+        // Use the JSON "name" as the "title"
+        title: hotel.name,
+        // Provide a default location (update if your JSON includes location)
+        location: "Riyadh, Saudi Arabia",
+        // Map the price field (renaming price_per_night to price)
+        price: hotel.price_per_night,
+        // Default values for additional fields expected by HotelCard:
+        distance: 2, // Example: distance in km
+        availability: 5, // Example: number of rooms available
+        features: ["Luxury", "Central location"] // Example: list of features
+      }));
 
-    loadHotels();
+      setHotels(mappedHotels);
+    }
   }, []);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Main container with width constraints */}
-      <div className="max-w-6xl mx-auto p-4 space-y-8">
+      <div className="mx-auto p-4 space-y-8">
         {/* Header */}
         <Header />
 
@@ -38,10 +75,10 @@ const HotelRecommendation = () => {
               >
                 Profile
               </h2>
-              <p className="text-lg">
+              <div className="text-lg">
                 Please find me some{" "}
                 <span className="font-bold">hotel stays</span> in Riyadh...
-              </p>
+              </div>
             </section>
           </aside>
 
@@ -50,14 +87,17 @@ const HotelRecommendation = () => {
             className="lg:col-span-2 space-y-6"
             aria-labelledby="recommendations-heading"
           >
+            <h4 style={{ ...style.headerStyle, cursor: 'pointer', verticalAlign: 'middle', alignItems: "center" }}  onClick={handleBackButtonClick}>
+                <span><img src="src/assets/icons/backArrow.png"  /></span>
+                <span>Hotel Recommendations</span></h4>
             {hotels.length === 0 ? (
-              <p
+              <div
                 className="text-center text-gray-400"
                 role="status"
                 aria-live="polite"
               >
                 Loading hotels...
-              </p>
+              </div>
             ) : (
               hotels.map((hotel, index) => (
                 <HotelCard key={index} hotel={hotel} />

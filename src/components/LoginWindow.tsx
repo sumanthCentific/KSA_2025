@@ -1,65 +1,114 @@
 import "../App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "./ui/Button";
 import { useNavigate } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
 
 const LoginWindow = () => {
-    const navigate = useNavigate();
-    const handleLoginClick = () => {
-        navigate('/summary');
-    };
-    return (
-        <section className="bg-dark rounded-lg h-[400px] w-[400px] d-flex flex-column align-items-center justify-content-start position-absolute top-50 start-50 translate-middle" aria-labelledby="listening-heading">
-            <label style={{
-                font: 'Poppins',
-                fontWeight: '700',
-                fontSize: '40px',
-                marginRight: '250px'
-            }}>Login</label>
-            <label style={{
-                font: 'Poppins',
-                fontWeight: '400',
-                fontSize: '20px',
-                marginRight: '190px'
-            }}> Welcome to T.E.S.T  </label><br />
-            <div className="mb-3" style={{
-                width: '350px'
-            }}>
-                <label htmlFor="userName" className="form-label">
-                    User Name
-                </label>
-                <input
-                    type="text"
-                    className="form-control"
-                    id="userName"
-                    name="userName"
-                />
-            </div>
+  const navigate = useNavigate();
+  const handleLoginClick = () => {
+    navigate("/welcome");
+  };
 
-            <div className="mb-3" style={{
-                width: '350px'
-            }}>
-                <label htmlFor="password" className="form-label">
-                    Password
-                </label>
-                <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    name="password"
-                />
-            </div>
-            <br/>
-            <Button className="btnGetStarted" style={{
-                width: '350px'
-            }} onClick={handleLoginClick}>Login</Button><br />
-        </section>
-    );
+  return (
+    <section
+      className="custom-login-rounded h-[400px] w-[450px] d-flex flex-column align-items-center justify-content-start position-absolute top-50 start-50 translate-middle p-4"
+      aria-labelledby="listening-heading"
+      style={{ height: "450px" }}
+     
+    >
+      <div
+        className="d-flex flex-column align-items-start mb-1"
+        style={{ width: "100%" }}
+      >
+        <span className="text-white fw-bold fs-1 mb-1">Login</span>
+        <span className="text-white fs-5 mb-4" style={{
+            color: "#FFFFFF", // White text color
+            fontSize: "16px", // Font size
+            fontWeight: 200, // Font weight
+            lineHeight: "24px", // Line height
+            textAlign: "left", // Left-align text
+          }}>Welcome to T.E.S.T</span>
+      </div>
+      <div className="mb-2" style={{ width: "100%" }}>
+        <label htmlFor="userName" className="form-label text-white" style={{
+            color: "#FFFFFF", // White text color
+            fontSize: "16px", // Font size
+            fontWeight: 200, // Font weight
+            lineHeight: "24px", // Line height
+            textAlign: "left", // Left-align text
+          }}>
+          Email
+        </label>
+        <input
+          type="text"
+          className="form-control form-control-custom"
+          id="userName"
+          name="userName"
+          tab-index="0"
+          style={{
+            backgroundColor: "#777777", // Light gray background
+            color: "white", // White text
+            border: "none",
+            borderRadius: '8px',
+            height: '55px'
+
+          }}
+          value={"demo@centific.com"}
+        />
+      </div>
+
+      <div className="mb-1" style={{ width: "100%" }}>
+        <label htmlFor="password" className="form-label text-white" style={{
+            color: "#FFFFFF", // White text color
+            fontSize: "16px", // Font size
+            fontWeight: 200, // Font weight
+            lineHeight: "24px", // Line height
+            textAlign: "left", // Left-align text
+          }}>
+          Password
+        </label>
+        <input
+          type="password"
+          className="form-control form-control-custom"
+          id="password"
+          name="password"
+          tab-index="0"
+          style={{
+            backgroundColor: "#777777", // Light gray background
+            color: "white", // White text
+            border: "none",
+            borderRadius: '8px',
+            height: '55px'
+          }}
+          value={"1234567"}
+        />
+      </div>
+
+      <div
+        className="d-flex justify-content-end mb-2"
+        style={{ width: "100%" }}
+      >
+        <label
+          htmlFor="forgetpassword"
+          className="form-label text-white"
+          tab-index="0"
+          style={{
+            color: "#FFFFFF", // White text color
+            fontSize: "16px", // Font size
+            fontWeight: 200, // Font weight
+            lineHeight: "24px", // Line height
+            textAlign: "left", // Left-align text
+          }}
+        >
+          Forget Password?
+        </label>
+      </div>
+
+      <Button tab-index="2" className="btnGetStarted w-100" style={{ height: "55px", fontSize: '18px' }} onClick={handleLoginClick}>
+        Login
+      </Button>
+    </section>
+  );
 };
 
 export default LoginWindow;
-

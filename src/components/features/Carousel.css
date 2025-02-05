@@ -1,40 +1,72 @@
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  width: 100%; /* Full width of the container */
+  height: 100vh; /* Use full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This ensures image takes 90% and dots take 10% */
+  border-radius: 15px; /* Add border radius to the container for rounded corners */
+}
 
-.carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .carousel-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 50%;
-  }
-  
-  .prev-button {
-    left: 10px;
-  }
-  
-  .next-button {
-    right: 10px;
-  }
-  
-  .carousel-button:hover {
-    background: rgba(0, 0, 0, 0.7);
-  }
-  
+/* Carousel Image */
+.carousel-image {
+  width: 100%;
+  height: 90%; /* Image takes 90% of the height */
+  object-fit: cover; /* This ensures the image scales properly */
+  display: block;
+  border-radius: 15px; /* Add border radius to the container for rounded corners */
+}
+
+/* Dot indicators container */
+.carousel-dots {
+  height: 10%; /* Dots take the remaining 10% */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the dots vertically */
+  z-index: 10; /* Ensure dots are above the image */
+}
+
+/* Individual dot */
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background: #FFFFFF80;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Active dot */
+.dot.active {
+  background-color: #fff;
+  border: 5px solid #FFFFFF80;
+  transform: scale(1.2); /* Make the active dot slightly larger */
+}
+
+/* Navigation buttons test */
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.carousel-buttons button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  border: 5px solid #FFFFFF80;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.carousel-buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,26 @@
+{
+    "hotels": {
+      "selection": [
+        {
+          "hotel_id": "H789",
+          "name": "Four Seasons Riyadh",
+          "price_per_night": 500.00
+        },
+        {
+          "hotel_id": "H101",
+          "name": "Marriott Riyadh",
+          "price_per_night": 720.00
+        },
+        {
+          "hotel_id": "H102",
+          "name": "DBI",
+          "price_per_night": 330.00
+        }
+      ],
+      "confirmation": {
+        "hotel_id": "H789",
+        "status": "confirmed"
+      }
+    }
+  }
+  

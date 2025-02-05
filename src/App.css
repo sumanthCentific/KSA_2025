@@ -4,7 +4,8 @@
 }
 
 body {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: rgb(17 24 39 / var(--tw-bg-opacity, 1)) !important;
+  
 }
 
 /* Custom component-specific styles */
@@ -40,7 +41,7 @@ body {
   left: 50%; transform: translateX(-50%); top: 0;
 }
 .btnGetStarted{
-  width: '189.36px';
+  width: '189px';
   height: '64px';
   top: '20px';
   left: '20px';
@@ -52,7 +53,6 @@ body {
   color: 'white';
   border: 'none';
   cursor: 'pointer';
-  font-size: '16px';
   background: linear-gradient(90deg, #FA75F8 0%, #9E6EE6 100%); /* Linear gradient */
   color: white; /* White text color */
 }
@@ -69,7 +69,35 @@ body {
   display: flex;
   gap: 20px;
 }
-
+.section-summary {
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  width: 438px;
+  height: 200px;
+  border-radius: 28px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.section-summary:hover {
+  background-color: #BEB1B9;
+}
+.section-summary:hover > .showText{
+  color: #222222;
+  visibility:visible;
+}
+.header-icon > svg {
+  fill: #DDC6C6;
+}
+.section-summary:hover svg {
+  fill: #86667E !important;
+}
+.showText{
+visibility: hidden;
+font-size: 20px;
+font-family: Poppins;
+padding-top: 10px;
+}
 .section {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
   padding: 20px;
@@ -78,4 +106,51 @@ body {
   height: 150px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the container is 100% height for the canvas to fill */
+.canvas-element {
+  width: 100%;   /* Fill the full width of the parent */
+  height: 100%;  /* Fill the full height of the parent */
+  display: block; /* Remove any space below the canvas */
+}
+
+/* Optional: You can set a height for the parent section that contains the canvas */
+section.relative {
+  height: 400px; /* Adjust the height as per your design needs */
+  position: relative; /* To position other elements (like buttons or dots) */
+}
+
+/* If you want to add some basic styling to the canvas itself */
+canvas {
+  background-color: #333; /* Optional background color */
+}
+
+.custom-login-rounded{
+  backdrop-filter: blur(60px);
+  background: linear-gradient(109.46deg, rgba(201, 201, 201, 0.8) -82.43%, rgba(196, 196, 196, 0.1) 100%) ;
+  border: 0px solid;
+  border-radius: 27px;
+}
+/* Add to your App.css or any other stylesheet */
+.form-control-custom {
+  background-color: #f12222; /* Light gray background */
+  color: white; /* White text */
+}
+.header-icon {
+  cursor: pointer;
+  margin-top: 20px;;
+}
+.cardBorder {
+  border: 1px solid #454545;
+}
+
+/* styles.css */
+.custom-text-lable-style {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14.13px;
+  font-weight: 400;
+  line-height: 24.02px;
+  letter-spacing: 0.3533px;
+  text-decoration-skip-ink: none;
 }
